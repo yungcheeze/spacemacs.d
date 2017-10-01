@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: container
+# key: ct
+# --
+${1:std::}${2:vector}<${3:string}>$0

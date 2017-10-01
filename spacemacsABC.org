@@ -1,0 +1,211 @@
+* SPC
+** SPC (Jump to a word)
+** TAB (Previous Buffer)
+** : (Run Shell Command)
+** ' (Pop up shell)
+** 0,1,...,9 (Jump to shell)
+** : (Run M-x)
+** ; (Comment operator)
+** ? (Helm session keybindings)
+** ' (Skip backwards in avy jump list)
+   Consider C-o instead
+** F1: system fuzzy search
+** a: Applications
+*** c: Calculator
+*** d: Deer
+*** E: Emojis
+*** G: games
+*** i: IRC
+*** m: Music
+*** o: Org
+*** p: Processes
+*** P: Package List
+*** r: Ranger
+*** s: Shells
+*** u: Undo Tree
+** b: Buffers
+*** . (Micro State)
+*** b: Helm mini
+*** B: IBuffer
+*** d: Delete buffer
+*** e: erase buffer contents
+*** h: go to spacemacs home
+*** k: kill buffer with ido
+*** K: kill all other buffers
+*** m: move bufffer across windows
+*** n p: next or previous useful buffer
+*** Y P: copy (paste) to clipboard (buffer)
+*** R: revert to data on disk
+*** s: switch to scratch buffer
+*** w: Toggle read only
+*** C-k: kill buffers with regxp
+** c: Compilation and Commenting
+*** c: Helm compile
+*** C: compile
+*** r: recompile (using prev command)
+*** l L: comment line (or invert)
+*** p P: comment paragraph (or invert)
+*** t T: comment to line (or invert)
+*** y Y: copy and comment
+** C: Capture and Colours
+*** c: org capture (see also SPC aoc)
+*** l: helm colours
+*** t T: ort capture
+** e: Errors
+*** c: clear all error displays
+*** h: describe syntax checkers
+*** l:toggle error list
+*** n, N, p: Jump between errors (l with unimpaired)
+*** s: change checker
+*** S: change checker (provide binary)
+*** v: verify setup
+** g: Git
+*** .: VCS microstate
+*** b: git blame microstate
+*** c: git commit
+*** C: git checkout
+*** d: git diff
+*** D: git diff HEAD
+*** e: ediff
+*** E: ediff HEAD
+*** f: git fetch
+*** F: git pull
+*** g: gists
+**** r/R: region (private)
+**** l: list gists
+**** b/B: buffer (private)
+*** h: github
+**** c/C: go to (or copy) git commit at point (by hash)
+**** l/L: go to (or copy) github URL to point
+**** o: open file in github
+**** C-c: clone repo to dir
+*** H: highlight
+**** c: clear
+**** h: by age of changes
+**** t: by last update time
+*** i:  init repo
+*** I: gitignore patterns helm
+*** l: git log
+*** L: git log for current file
+*** m: show last commit message at point
+*** P: push
+*** s: magit status
+*** S: stage whole file
+*** t: git timemachine microstate
+** f: Files
+*** a: FASD (Must install)
+*** c: write buffer to new file name
+*** C: convert line endings
+**** d: to DOS
+**** u: to UNIX
+*** D: Delete buffer and file
+*** e: Emacs config stuff
+*** f: find file
+*** f: find (using word on cursor) file
+**** d: find .spacemacs
+**** e: ediff 
+**** f: spacemacs FAQ helm
+**** h: help
+**** i:init file
+**** R: sync dotfile
+**** v: spacemacs version
+*** g: grep
+*** j: jump to file in ranger
+*** J: open junk file
+*** l: open file literally
+*** L: helm Locate
+*** o: open in external app
+*** r: recent files
+*** R: rename file
+*** s: write buffer to file
+*** t: Neotree (Like NERDTree)
+*** v: variables
+*** y: show and copy file name
+** h: Help
+*** RET: Enable minor mode
+*** SPC: help
+*** b: helm bookmarks
+*** d: describe
+**** c: character
+**** f: function
+**** F: face
+**** k: key
+**** m: mode
+**** p: package
+**** s: system
+**** t: theme
+**** v: variable
+*** i: info at point
+*** k: which-key top level
+*** l: resume last helm session
+*** L: helm elisp libraries
+*** m: man pages
+*** M: switch major mode
+*** T: evil tutorial
+** i: Insert
+*** e: emoji
+*** j, J (k, K): insert line below (above)
+*** l: lorem ipsum
+*** s: helm yasnippet
+*** S: auto yasnippet
+*** u: unicode chars
+** j: Join and Split
+*** =: reindent
+*** 0, $: push mark and go to beginning/end of line
+*** j: avy word jump
+*** k: go to next line and indent
+*** n: insert newline at point
+*** s (S): split sexp (and newline)
+*** o (O): open new line above (Below)
+** k: Evil Lisp State
+   works like a micro-state
+*** .: enter lisp state without a command
+*** 0 ($): beginning (end) of sexp
+*** (, ): insert new sexp before/after (and leave lisp state)
+*** `: hybrid
+**** k: kill to the end of the line and leave parens balanced
+**** p: push hybrid sexp
+**** s: slurp hybrid sexp
+**** t: transpose hybrid sexp
+*** a: absorb sexp
+*** b, B: barf forward or backwards
+*** c: convolute sexp
+*** d, D: delete forwards or backwards
+**** s: symbol
+**** w: word
+**** x: sexp
+*** e, E: delete to end of sexp (forward and backward) and splice
+*** h, l: go to previous/next symbol
+*** H, L: previous and next sexp (on the same level)
+*** i, I, p, P, u, v, V, C-r, C-v, ESC: same as in evil normal state
+*** j, K: next/previous closing paren
+*** J: join sexps before and after point
+*** r: raise sexp (substitute parent sexp with this one)
+*** s, S: slurp forward or backward
+*** t: transpose sexp (move before previous one)
+*** U: go to beginning of parent sexp
+*** w, W: wrap or unwrap sexp in parens
+*** y: copy sexp
+** p: projects
+*** !: run shell command in project root
+*** &: run asynchronous shell command in project root
+*** a: switch between implementation and test file
+*** b: list buffers in project
+*** c: compile project
+*** d/D: find dir
+*** f: find file in project
+*** G: regenerate tags
+*** h: helm projectile
+*** I: invalidate cache
+*** k: kill buffers in project
+*** o: projectile multi-occur
+*** p: list of projects
+*** r: recent files
+*** R: project-wide search replace
+*** t: Neotree in project root
+*** T: find test file
+*** v: open VC status window
+*** y: find tags
+
+
+

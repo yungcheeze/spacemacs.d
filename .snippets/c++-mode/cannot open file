@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: cannot open file
+# key: cof
+# --
+if (!${1:myfile}.is_open()) {
+    ${2:std::}cout << "Couldn't open file" << $2endl;
+    return 1;
+}$0

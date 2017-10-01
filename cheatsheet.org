@@ -1,0 +1,116 @@
+* Config stuff
+  | CMD                        | DESC            |
+  |----------------------------+-----------------|
+  | SPC f e d                  | open .spacemacs |
+  | Escape insert mode         | fd              |
+  | Projectile find other file | C-c p 4 a       |
+  | Set c-indentation style    | C-c .           |
+  | View Snippets              | SPC i s         |
+  | Skip and clear placeholder | C-d             |
+  | Avy word jump              | SPC j j         |
+
+* Evil iedit state
+  CMD = SPC s e
+
+** State Transitions
+| Key Binding | From          | To     |
+|-------------+---------------+--------|
+| e           | expand-region | iedit  |
+| ESC         | iedit         | normal |
+| C-g         | iedit         | normal |
+| \\ESC       | iedit-insert  | iedit  |
+| C-g         | iedit-insert  | normal |
+
+** iEdit state commands
+| Key Binding | Description                                                                           |
+|-------------+---------------------------------------------------------------------------------------|
+| ESC         | go back to `normal state`                                                             |
+| TAB         | toggle current occurrence                                                             |
+| 0           | go to the beginning of the current occurrence                                         |
+| {$}         | go to the end of the current occurrence                                               |
+| {#}         | prefix all occurrences with an increasing number (C-u to choose the starting number). |
+| A           | go to the end of the current occurrence and switch to `iedit-insert state`            |
+| D           | delete the occurrences                                                                |
+| F           | restrict the scope to the function                                                    |
+| gg          | go to first occurrence                                                                |
+| G           | go to last occurrence                                                                 |
+| I           | go to the beginning of the current occurrence and switch to `iedit-insert state`      |
+| J           | increase the edition scope by one line below                                          |
+| K           | increase the edition scope by one line above                                          |
+| L           | restrict the scope to the current line                                                |
+| n           | go to next occurrence                                                                 |
+| N           | go to previous occurrence                                                             |
+| p           | replace occurrences with last yanked (copied) text                                    |
+| S           | (substitute) delete the occurrences and switch to `iedit-insert state`                |
+| V           | toggle visibility of lines with no occurrence                                         |
+| U           | Up-case the occurrences                                                               |
+| C-U         | down-case the occurrences                                                             |
+|-------------+---------------------------------------------------------------------------------------|
+| M-;         | toggle occurence                                                                      |
+| M-n         | expand to next occurence                                                              |
+| M-p         | expand to previous occurence                                                          |
+| M-I         | restrict to line                                                                      |
+
+** iEdit insert mode commands
+| Key Binding | Description               |
+|-------------+---------------------------|
+| ESC         | go back to `iedit state`  |
+| C-g         | go back to `normal state` |
+* TODO Miscellaneous Commands
+| CMD       | Desc                         |
+|-----------+------------------------------|
+| C-e (C-y) | move page one line up (down) |
+| SPC t n   | toggle line number           |
+| SPC t r   | relative line number         |
+| SPC k w   | enclose word in brackets     |
+| SPC u     | C-u remap                    |
+* Insert mode commands
+| CMD | Desc                  |
+|-----+-----------------------|
+| M-f | next word             |
+| M-b | prev word             |
+| M-c | Capitalise Word       |
+| M-u | All Caps Word         |
+| M-e | go to end of line     |
+| M-. | Helm current dir      |
+| M-m | Leader in insert mode |
+| M-i | Tab to tabstop        |
+* Potential packages/layers
+** Themeing
+* Calc
+| CMD     | Desc                                     |
+|---------+------------------------------------------|
+| C-M-i   | (M-TAB alternative) rotate top 3 numbers |
+| C-u m a | Special Incomplete algebraic mode        |
+| t       | Trail Commands                           |
+| `       | edit last stack entry                    |
+| c r     | Change to radians                        |
+| c d     | Change to degreees                       |
+| d       | change display precision                 |
+| m       | change mode                              |
+| U       | undo                                     |
+| D       | redo                                     |
+* helm-buffers
+
+| cmd   | Desc                  |
+|-------+-----------------------|
+| C-SPC | mark buffer           |
+| M-D   | delete marked buffers |
+
+* Multiple cursors
+- run 'turn-on-evil-mc-mode' to activate
+- 'g r' is prefix for mc commands
+- visually select a region then 'g r m' to create cursors at all matching points
+- 'g r u' to delete all cursors
+| CMD   | Desc                      |
+|-------+---------------------------|
+| g r j | make cursor on line below |
+| g r k | make cursor on line above |
+* Search/Replace
+| CMD     | DESC                                                                           |
+|---------+--------------------------------------------------------------------------------|
+| Alt %	 | query-replace; active region, or cursor point to end	interactive find/replace |
+| y       | do the replacement.                                                            |
+| n       | skip                                                                           |
+| "!"     | do this and all remaining replacements without asking.                         |
+| C-g     | cancel.                                                                        |
