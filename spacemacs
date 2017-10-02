@@ -330,7 +330,6 @@ you should place your code here."
   ;; C-mode indent style
   (setq c-default-style "cc-mode")
   (add-to-list 'auto-mode-alist '("\\.cpph$" . c++-mode))
-  (setq paradox-github-token "d314399129ea377ff785c04ced82b98ffce52f8d")
 
   ;; make underscore part of word in evil commands
   ;; (defadvice evil-inner-word (around underscore-as-word activate)
