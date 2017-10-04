@@ -114,3 +114,21 @@
 | n       | skip                                                                           |
 | "!"     | do this and all remaining replacements without asking.                         |
 | C-g     | cancel.                                                                        |
+* Emacs Commands
+| CMD         | Desc                                       |
+|-------------+--------------------------------------------|
+| C-s         | i-search forward                           |
+| C-r         | (during forward search) i-search backaward |
+| C-M-v/C-M-V | scroll alternate window                  |
+* Org-Mode
+
+** Topics of interest
+   - Note taken on [2017-10-03 Tue 17:24] \\
+     New Stuff. Be Aware
+- Drawers
+* Interesting Pointers
+
+- Create new files/directories by simply typing them in helm-find-files (SPC f f)
+
+
+
