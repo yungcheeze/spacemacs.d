@@ -62,8 +62,6 @@ values."
      syntax-checking
      version-control
      themes-megapack
-     (ranger :variables
-             ranger-override-dired-mode t)
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t)
