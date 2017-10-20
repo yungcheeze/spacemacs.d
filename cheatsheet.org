@@ -8,7 +8,12 @@
   | View Snippets              | SPC i s         |
   | Skip and clear placeholder | C-d             |
   | Avy word jump              | SPC j j         |
-
+** Python
+*** Set interpreter
+in user-config:
+#+begin_src emacs-lisp :tangle yes
+  (setq python-shell-interpreter "MY_PYTHON_INTERPRETER")
+#+end_src
 * Evil iedit state
   CMD = SPC s e
 
@@ -64,6 +69,7 @@
 | SPC t r   | relative line number         |
 | SPC k w   | enclose word in brackets     |
 | SPC u     | C-u remap                    |
+| C-c C-k   | Copy helm pattern and quit   |
 * Insert mode commands
 | CMD | Desc                  |
 |-----+-----------------------|
@@ -121,6 +127,9 @@
 | C-r         | (during forward search) i-search backaward |
 | C-M-v/C-M-V | scroll alternate window                  |
 * Org-Mode
+| CMD | Desc                 |
+|-----+----------------------|
+| , P | add heading property |
 
 ** Topics of interest
    - Note taken on [2017-10-03 Tue 17:24] \\
