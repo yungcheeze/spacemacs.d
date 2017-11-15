@@ -1,4 +1,4 @@
-# key: inline_
+# key: inl_
 # name: inline math
 # --
-\[ $1 \] $0
+\\( $1 \\) $0
