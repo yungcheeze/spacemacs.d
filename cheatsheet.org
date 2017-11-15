@@ -62,14 +62,19 @@ in user-config:
 | ESC         | go back to `iedit state`  |
 | C-g         | go back to `normal state` |
 * TODO Miscellaneous Commands
-| CMD       | Desc                         |
-|-----------+------------------------------|
-| C-e (C-y) | move page one line up (down) |
-| SPC t n   | toggle line number           |
-| SPC t r   | relative line number         |
-| SPC k w   | enclose word in brackets     |
-| SPC u     | C-u remap                    |
-| C-c C-k   | Copy helm pattern and quit   |
+| CMD       | Desc                                | Defun            |
+|-----------+-------------------------------------+------------------|
+| C-e (C-y) | move page one line up (down)        |                  |
+| SPC t n   | toggle line number                  |                  |
+| SPC t r   | relative line number                |                  |
+| SPC k w   | enclose word in brackets            |                  |
+| SPC u     | C-u remap                           |                  |
+| C-c C-k   | Copy helm pattern and quit          |                  |
+| C-c TAB   | Paste helm pattern to current point |                  |
+| SPC i u   | insert unicode symbol               |                  |
+| C-x l     | Count number of lines in page       | count-lines-page |
+| K         | helm man-woman                      |                  |
+| C-x r m   | bookmark helm session               |                  |
 * Insert mode commands
 | CMD | Desc                  |
 |-----+-----------------------|
@@ -96,12 +101,14 @@ in user-config:
 | m       | change mode                              |
 | U       | undo                                     |
 | D       | redo                                     |
+| "_"     | insert negative number                   |
 * helm-buffers
 
 | cmd   | Desc                  |
 |-------+-----------------------|
 | C-SPC | mark buffer           |
 | M-D   | delete marked buffers |
+| Tab   | Preview file/buffer   |
 
 * Multiple cursors
 - run 'turn-on-evil-mc-mode' to activate
@@ -127,9 +134,11 @@ in user-config:
 | C-r         | (during forward search) i-search backaward |
 | C-M-v/C-M-V | scroll alternate window                  |
 * Org-Mode
-| CMD | Desc                 |
-|-----+----------------------|
-| , P | add heading property |
+| CMD     | Desc                               |
+|---------+------------------------------------|
+| , P     | add heading property               |
+| C-c C-c | refresh dynamically computed block |
+| C-c C-t | org todo                           |
 
 ** Topics of interest
    - Note taken on [2017-10-03 Tue 17:24] \\
