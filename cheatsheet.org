@@ -134,11 +134,12 @@ in user-config:
 | C-r         | (during forward search) i-search backaward |
 | C-M-v/C-M-V | scroll alternate window                  |
 * Org-Mode
-| CMD     | Desc                               |
-|---------+------------------------------------|
-| , P     | add heading property               |
-| C-c C-c | refresh dynamically computed block |
-| C-c C-t | org todo                           |
+| CMD     | Desc                               | defun                 |
+|---------+------------------------------------+-----------------------|
+| , P     | add heading property               |                       |
+| C-c C-c | refresh dynamically computed block |                       |
+| C-c C-t | org todo                           |                       |
+| C-c C-* | Convert list into subtree          | org-list-make-subtree |
 
 ** Topics of interest
    - Note taken on [2017-10-03 Tue 17:24] \\
