@@ -32,8 +32,8 @@ in user-config:
 | ESC         | go back to `normal state`                                                             |
 | TAB         | toggle current occurrence                                                             |
 | 0           | go to the beginning of the current occurrence                                         |
-| {$}         | go to the end of the current occurrence                                               |
-| {#}         | prefix all occurrences with an increasing number (C-u to choose the starting number). |
+| ~$~         | go to the end of the current occurrence                                               |
+| ~#~         | prefix all occurrences with an increasing number (C-u to choose the starting number). |
 | A           | go to the end of the current occurrence and switch to `iedit-insert state`            |
 | D           | delete the occurrences                                                                |
 | F           | restrict the scope to the function                                                    |
@@ -134,12 +134,16 @@ in user-config:
 | C-r         | (during forward search) i-search backaward |
 | C-M-v/C-M-V | scroll alternate window                  |
 * Org-Mode
-| CMD     | Desc                               | defun                 |
-|---------+------------------------------------+-----------------------|
-| , P     | add heading property               |                       |
-| C-c C-c | refresh dynamically computed block |                       |
-| C-c C-t | org todo                           |                       |
-| C-c C-* | Convert list into subtree          | org-list-make-subtree |
+- prettify-org-buffer to get cool highlights
+| CMD            | Desc                                            | defun                                       |
+|----------------+-------------------------------------------------+---------------------------------------------|
+| ~, P~          | add heading property                            |                                             |
+| ~C-c C-c~      | refresh dynamically computed block              |                                             |
+| ~C-c C-t~      | org todo                                        |                                             |
+| ~C-c C-*~      | Convert list into subtree                       | org-list-make-subtree                       |
+| ~S-left/right~ | increment/decrement timestamp by day            | org-timestamp-up-day/org-timestamp-down-day |
+| ~S-up/down~    | increment/decrement timestamp element at cursor | org-timestamp-up/org-timestamp-down         |
+|                |                                                 |                                             |
 
 ** Topics of interest
    - Note taken on [2017-10-03 Tue 17:24] \\
@@ -149,5 +153,33 @@ in user-config:
 
 - Create new files/directories by simply typing them in helm-find-files (SPC f f)
 
+* Replacing text in several files
+If you have =rg=, =ag=, =pt= or =ack= installed, replacing an occurrence of text
+in several files can be performed via [[https://github.com/syohex/emacs-helm-ag][helm-ag]].
 
+Say you want to replace all =foo= occurrences by =bar= in your current
+project:
+  - initiate a search with ~SPC /~
+  - enter in edit mode with ~C-c C-e~
+  - go to the occurrence and enter in =iedit state= with ~SPC s e~
+  - edit the occurrences then leave the =iedit state=
+  - press ~C-c C-c~
+
+*Note*: In Spacemacs, =helm-ag= despite its name works with =rg=, =pt= and =ack=
+as well (but not with =grep=).
+
+* Magit
+- Use numbers to collapse/expand to fold level
+  - i.e. 1 = collapse to first level, 3 = collapse/expand to 3rd level
+* C++
+- prefix ~SPC-u n~ to compile command to run n compilation processes
+- c-add-style to define new indentation style
+  - ~C-c C-o~ to view style element at point
+** Auto-complete
+   - pass compile trace to cc_args.py to generate .clang-complete file
+   - place .clang-complete in root of project
+** Cheatsheet
+| CMD   | desc                  |
+|-------+-----------------------|
+| ~C-c .~ | set indentation style |
 
