@@ -347,6 +347,7 @@ you should place your code here."
   ;; Tramp stuff
   (setq tramp-default-method "sudo")
   (defalias 'exit-tramp 'tramp-cleanup-all-buffers)
+
   ;; make underscore part of word in evil commands
   ;; (defadvice evil-inner-word (around underscore-as-word activate)
   ;;   (let ((table (copy-syntax-table (syntax-table))))
@@ -360,6 +361,10 @@ you should place your code here."
   ;; Org-mode hooks
   (add-hook 'org-mode-hook 'auto-fill-mode)
   (add-hook 'org-mode-hook 'electric-pair-mode)
+  ;; Org-mode keys
+  (with-eval-after-load 'org
+    (define-key org-mode-map (kbd "M-n") 'org-metadown)
+    (define-key org-mode-map (kbd "M-p") 'org-metaup))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
