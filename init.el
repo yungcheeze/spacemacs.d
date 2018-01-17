@@ -417,6 +417,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol nil)
  '(global-evil-mc-mode t)
+ '(helm-external-programs-associations (quote (("pdf" . "zathura"))))
  '(helm-make-build-dir "../exahype/Demonstrators/EulerFV")
  '(org-agenda-files
    (quote
@@ -433,6 +434,7 @@ This function is called at the very end of Spacemacs initialization."
      ("" "siunitx" nil))))
  '(org-link-search-must-match-exact-headline nil)
  '(org-list-allow-alphabetical t)
+ '(org-load-hook nil)
  '(org-refile-allow-creating-parent-nodes t)
  '(org-refile-targets
    (quote
@@ -462,7 +464,7 @@ This function is called at the very end of Spacemacs initialization."
      (nil "lock" "gpg")
      ("lock" "")
      ("gpg" ""))))
- '(python-shell-interpreter "python2"))
+ '(python-shell-interpreter "python2" t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
