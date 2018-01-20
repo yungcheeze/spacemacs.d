@@ -339,6 +339,8 @@ you should place your code here."
   ;; C-mode indent style
   ;; (setq c-default-style "cc-mode")
   (add-to-list 'auto-mode-alist '("\\.cpph$" . c++-mode))
+
+  ;;Paradox
   (setq paradox-github-token "28cd8f8cd6843aa38db51cccecae7c1f76189db6")
   (edit-server-start)
 
