@@ -1,3 +1,6 @@
+* Mods Hitlist
+- map ~M-Ret-l~ and ~M-Ret-h~ to org-metaright and org-metaleft
+- turn off gaps when in tabbed mode
 * Config stuff
   | CMD                        | DESC            |
   |----------------------------+-----------------|
@@ -62,19 +65,21 @@ in user-config:
 | ESC         | go back to `iedit state`  |
 | C-g         | go back to `normal state` |
 * TODO Miscellaneous Commands
-| CMD       | Desc                                | Defun            |
-|-----------+-------------------------------------+------------------|
-| C-e (C-y) | move page one line up (down)        |                  |
-| SPC t n   | toggle line number                  |                  |
-| SPC t r   | relative line number                |                  |
-| SPC k w   | enclose word in brackets            |                  |
-| SPC u     | C-u remap                           |                  |
-| C-c C-k   | Copy helm pattern and quit          |                  |
-| C-c TAB   | Paste helm pattern to current point |                  |
-| SPC i u   | insert unicode symbol               |                  |
-| C-x l     | Count number of lines in page       | count-lines-page |
-| K         | helm man-woman                      |                  |
-| C-x r m   | bookmark helm session               |                  |
+| CMD       | Desc                                   | Defun            |
+|-----------+----------------------------------------+------------------|
+| C-e (C-y) | move page one line up (down)           |                  |
+| SPC t n   | toggle line number                     |                  |
+| SPC t r   | relative line number                   |                  |
+| SPC k w   | enclose word in brackets               |                  |
+| SPC u     | C-u remap                              |                  |
+| C-c C-k   | Copy helm pattern and quit             |                  |
+| C-c TAB   | Paste helm pattern to current point    |                  |
+| SPC i u   | insert unicode symbol                  |                  |
+| C-x l     | Count number of lines in page          | count-lines-page |
+| K         | helm man-woman                         |                  |
+| C-x r m   | bookmark helm session                  |                  |
+|           | Open url in browser                    | browse-url       |
+|           | remove deleted files from helm recentf | recentf-cleanup  |
 * Insert mode commands
 | CMD | Desc                  |
 |-----+-----------------------|
@@ -144,7 +149,8 @@ in user-config:
 | ~S-left/right~ | increment/decrement timestamp by day            | org-timestamp-up-day/org-timestamp-down-day |
 | ~S-up/down~    | increment/decrement timestamp element at cursor | org-timestamp-up/org-timestamp-down         |
 |                |                                                 |                                             |
-
+** fixing image width
+   set org-image-actual-width to a number in pixels
 ** Topics of interest
    - Note taken on [2017-10-03 Tue 17:24] \\
      New Stuff. Be Aware
@@ -171,6 +177,11 @@ as well (but not with =grep=).
 * Magit
 - Use numbers to collapse/expand to fold level
   - i.e. 1 = collapse to first level, 3 = collapse/expand to 3rd level
+| CMD         | Desc                 | defun                 |
+|-------------+----------------------+-----------------------|
+| ~O f~       | reset a file         | magit-file-checkout   |
+| ~SPC g f h~ | log current file     | magit-log-buffer-file |
+|             | view magit reference | magit-visit-ref       |
 * C++
 - prefix ~SPC-u n~ to compile command to run n compilation processes
 - c-add-style to define new indentation style
