@@ -358,6 +358,9 @@ you should place your code here."
   ;; Evil MC
   (turn-on-evil-mc-mode)
 
+  ;;Golden-ratio
+  (golden-ratio-mode)
+
   ;; Org-mode hooks
   (add-hook 'org-mode-hook 'auto-fill-mode)
   (add-hook 'org-mode-hook 'electric-pair-mode)
