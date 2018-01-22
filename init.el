@@ -52,6 +52,19 @@ values."
                       auto-completion-private-snippets-directory "~/.spacemacs.d/snippets"
                       auto-completion-enable-help-tooltip t)
      better-defaults
+     ibuffer
+     semantic
+     games
+     chrome
+     dash
+     fasd
+     imenu-list
+     speed-reading
+     ;; ycmd
+
+     ;; finance
+     ;; prodigy
+
      emacs-lisp
      git
      markdown
@@ -371,6 +384,11 @@ you should place your code here."
   (with-eval-after-load 'org
     (define-key org-mode-map (kbd "M-n") 'org-metadown)
     (define-key org-mode-map (kbd "M-p") 'org-metaup))
+
+  ;; YCMD
+  ;; (setq ycmd-server-command '("python" "/usr/share/vim/vimfiles/third_party/ycmd"))
+  (setq ycmd-server-command '("python" "/home/yungcheeze/.ycmd/ycmd"))
+  (setq ycmd-force-semantic-completion t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
