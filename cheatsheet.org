@@ -109,11 +109,13 @@ in user-config:
 | "_"     | insert negative number                   |
 * helm-buffers
 
-| cmd   | Desc                  |
-|-------+-----------------------|
-| C-SPC | mark buffer           |
-| M-D   | delete marked buffers |
-| Tab   | Preview file/buffer   |
+| cmd   | Desc                       |
+|-------+----------------------------|
+| C-SPC | mark buffer                |
+| M-D   | delete marked buffers      |
+| Tab   | Preview file/buffer        |
+| C-Tab | copy text of selected item |
+| C-r   | open file/directory as root |
 
 * Multiple cursors
 - run 'turn-on-evil-mc-mode' to activate
