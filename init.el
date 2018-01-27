@@ -349,13 +349,18 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  ;;WINDOW OPTIONS;;
+  (golden-ratio-mode) ;;Golden-ratio
+  (setq split-width-threshold 0) ;; Force vertical split
+  (setq split-height-threshold nil)
+
   ;; C-mode indent style
   ;; (setq c-default-style "cc-mode")
   (add-to-list 'auto-mode-alist '("\\.cpph$" . c++-mode))
 
   ;;Paradox
   (setq paradox-github-token "28cd8f8cd6843aa38db51cccecae7c1f76189db6")
-  (edit-server-start)
+  ;; (edit-server-start)
 
   ;; Python Version
   ;; (setq python-shell-interpreter "python3")
@@ -374,8 +379,6 @@ you should place your code here."
   ;; Evil MC
   (turn-on-evil-mc-mode)
 
-  ;;Golden-ratio
-  (golden-ratio-mode)
 
   ;; Org-mode hooks
   (add-hook 'org-mode-hook 'auto-fill-mode)
@@ -384,11 +387,21 @@ you should place your code here."
   (with-eval-after-load 'org
     (define-key org-mode-map (kbd "M-n") 'org-metadown)
     (define-key org-mode-map (kbd "M-p") 'org-metaup))
-
+  ;;Refile Targets
+  (setq org-refile-targets '(("/home/yungcheeze/Dropbox/Org/Agenda/Project.org" :level . 1)
+                             ("/home/yungcheeze/Dropbox/Org/Capture/capture-main.org" :level . 1)
+                             (org-agenda-files :tag . "REFILE_TARGET")
+                             (nil :maxlevel . 2)))
+  
   ;; YCMD
   ;; (setq ycmd-server-command '("python" "/usr/share/vim/vimfiles/third_party/ycmd"))
-  (setq ycmd-server-command '("python" "/home/yungcheeze/.ycmd/ycmd"))
-  (setq ycmd-force-semantic-completion t)
+  ;; (setq ycmd-server-command '("python" "/home/yungcheeze/.ycmd/ycmd"))
+  ;; (setq ycmd-force-semantic-completion t)
+
+  ;; PROJECTILE
+  (with-eval-after-load 'projectile 
+    (add-to-list 'projectile-other-file-alist '("h" ("cpph" "c" "cc" "cpp" "ipp" "hpp" "cxx" "ixx" "hxx" "m" "mm")))
+    (add-to-list 'projectile-other-file-alist '("cpph" "h")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
