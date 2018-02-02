@@ -39,6 +39,8 @@ values."
      html
      python
      ipython-notebook
+     octave
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -60,6 +62,7 @@ values."
      fasd
      imenu-list
      speed-reading
+     gnus
      ;; ycmd
 
      ;; finance
@@ -349,6 +352,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq-default spaceline-minor-modes-p nil)
+  ;; (setq-default org-display-custom-times t)
+  ;; (setq org-time-stamp-custom-formats '("<%d-%b-%Y %a>" . "<%d-%b-%Y %a %H:%M>"))
   ;;WINDOW OPTIONS;;
   (golden-ratio-mode) ;;Golden-ratio
   (setq split-width-threshold 0) ;; Force vertical split
@@ -392,11 +398,8 @@ you should place your code here."
                              ("/home/yungcheeze/Dropbox/Org/Capture/capture-main.org" :level . 1)
                              (org-agenda-files :tag . "REFILE_TARGET")
                              (nil :maxlevel . 2)))
-  
-  ;; YCMD
-  ;; (setq ycmd-server-command '("python" "/usr/share/vim/vimfiles/third_party/ycmd"))
-  ;; (setq ycmd-server-command '("python" "/home/yungcheeze/.ycmd/ycmd"))
-  ;; (setq ycmd-force-semantic-completion t)
+  ;; Image Preview
+  (setq org-image-actual-width 300)
 
   ;; PROJECTILE
   (with-eval-after-load 'projectile 
@@ -428,10 +431,6 @@ you should place your code here."
      ("" "siunitx" nil))))
  '(org-list-allow-alphabetical t)
  '(org-refile-allow-creating-parent-nodes t)
- '(org-refile-targets
-   (quote
-    (("/home/yungcheeze/Dropbox/Org/Agenda/Project.org" :level . 1)
-     ("/home/yungcheeze/Dropbox/Org/Capture/capture-main.org" :level . 1))))
  '(org-refile-use-outline-path t)
  '(package-selected-packages
    (quote
@@ -452,19 +451,19 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ein:use-auto-complete-superpack t)
+ '(custom-safe-themes
+   (quote
+    ("2a739405edf418b8581dcd176aaf695d319f99e3488224a3c495cb0f9fd814e3" default)))
  '(evil-want-Y-yank-to-eol nil)
  '(global-evil-mc-mode t)
- '(magit-display-buffer-function (quote magit-display-buffer-traditional))
  '(org-agenda-files
    (quote
-    ("~/Documents/3rd_Year/Project/writeups/design report/tweaks.org" "/home/yungcheeze/Dropbox/3rd Year/deadlines.org" "/home/yungcheeze/Dropbox/Org/Agenda/Project.org")))
- '(org-default-notes-file "/home/yungcheeze/Dropbox/Org/Capture/capture-main.org")
+    ("/home/yungcheeze/Dropbox/3rd Year/deadlines.org" "/home/yungcheeze/Dropbox/Org/Agenda/")))
+ '(org-default-notes-file "/home/yungcheeze/Dropbox/Org/Capture/capture-main.org" t)
  '(org-format-latex-options
    (quote
     (:foreground default :background default :scale 1.5 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
                  ("begin" "$1" "$" "$$" "\\(" "\\["))))
- '(org-image-actual-width 250)
  '(org-latex-packages-alist
    (quote
     (("" "physics" t)
