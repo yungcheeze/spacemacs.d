@@ -352,6 +352,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; open urls in qutebrowser
+  (setq browse-url-browser-function 'browse-url-generic)
+  (setq-default browse-url-generic-program "qutebrowser")
+
+  (add-to-list 'load-path "~/.spacemacs.d/packages")
+  (require 'typing-practice)
   (setq-default spaceline-minor-modes-p nil)
   ;; (setq-default org-display-custom-times t)
   ;; (setq org-time-stamp-custom-formats '("<%d-%b-%Y %a>" . "<%d-%b-%Y %a %H:%M>"))
