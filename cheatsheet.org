@@ -1,4 +1,10 @@
 * Mods Hitlist
+- find a better workaround than globally installing ipython
+  - error: json-read-table error
+  - replicate:
+    - delete jupyter from pip
+    - enable ipython-notebook layer
+    - start org-mode
 - map ~M-Ret-l~ and ~M-Ret-h~ to org-metaright and org-metaleft
 - turn off gaps when in tabbed mode
 * Config stuff
