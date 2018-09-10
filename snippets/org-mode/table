@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: table
+# key: tbl_
+# --
+#+CAPTION: ${1:caption}
+#+ATTR_LaTeX: ${2: :width \textwidth} ${3: :environment tabularx :align |XX| }
+#+LABEL: ${4:tbl:${5:label}}

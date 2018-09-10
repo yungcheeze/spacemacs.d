@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: latex header
+# key: lth_
+# --
+#+LaTeX_HEADER: ${1:\usepackage{${2:tabularx}}}$0
