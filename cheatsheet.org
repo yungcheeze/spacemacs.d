@@ -200,9 +200,10 @@ as well (but not with =grep=).
    - pass compile trace to cc_args.py to generate .clang-complete file
    - place .clang-complete in root of project
 ** Cheatsheet
-| CMD   | desc                  |
-|-------+-----------------------|
-| ~C-c .~ | set indentation style |
+| CMD       | desc                  |
+|-----------+-----------------------|
+| ~C-c .~   | set indentation style |
+| ~SPC s j~ | helm functions        |
 * Legacy Commands
 | CMD | DESC                    |
 |-----+-------------------------|
