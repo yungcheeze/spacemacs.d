@@ -30,12 +30,7 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(python
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
+   '(html
      helm
      ranger
      (shell :variables
@@ -44,7 +39,8 @@ values."
      debug
      syntax-checking
      (auto-completion :variables
-                      auto-completion-enable-snippets-in-popup t)
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-idle-delay 0.5)
      imenu-list
 
      ;; better-defaults
@@ -62,6 +58,10 @@ values."
             ;; c-c++-enable-clang-support t
             c-c++-enable-rtags-support t)
      (cmake :variables cmake-enable-cmake-ide-support t)
+
+     python
+     javascript
+     node
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
