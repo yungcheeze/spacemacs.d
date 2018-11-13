@@ -3,4 +3,4 @@
 # key: cout
 # --
 
-std::cout << $0${1: << ${2:std::endl}};
+std::cout << ${1:${2:$0 << }std::endl};

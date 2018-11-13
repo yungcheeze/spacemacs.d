@@ -115,15 +115,17 @@ in user-config:
 | "_"     | insert negative number                   |
 * helm-buffers
 
-| cmd   | Desc                        |
-|-------+-----------------------------|
-| C-SPC | mark buffer                 |
-| M-D   | delete marked buffers       |
-| Tab   | Preview file/buffer         |
-| C-Tab | copy text of selected item  |
-| C-r   | open file/directory as root |
-| C-l   | delete expansion            |
-| C-j   | Expand thing at point       |
+| cmd         | Desc                        |
+|-------------+-----------------------------|
+| C-SPC       | mark buffer                 |
+| M-D         | delete marked buffers       |
+| Tab         | Preview file/buffer         |
+| C-Tab       | copy text of selected item  |
+| C-r         | open file/directory as root |
+| C-l         | delete expansion            |
+| C-j         | Expand thing at point       |
+| C-c C-k     | copy file name              |
+| C-u C-c C-k | copy file path              |
 
 * Multiple cursors
 - run 'turn-on-evil-mc-mode' to activate
