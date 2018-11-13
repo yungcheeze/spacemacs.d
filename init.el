@@ -32,9 +32,11 @@ values."
    dotspacemacs-mode-line-theme 'spacemacs
 
    dotspacemacs-configuration-layers
-   '(html
+   '(
      helm
-     ranger
+     (ranger :variables
+             ranger-cleanup-on-disable t)
+     fasd
      (shell :variables
             shell-default-shell 'eshell)
 
@@ -57,11 +59,16 @@ values."
 
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
-            ;; c-c++-enable-clang-support t
+            c-c++-enable-clang-support t
+            c-c++-enable-clang-format-on-save nil
+            c-c++-enable-google-style t
+            c-c++-enable-google-newline t
             c-c++-enable-rtags-support t)
      (cmake :variables cmake-enable-cmake-ide-support t)
 
      python
+
+     html
      javascript
      node
      )
