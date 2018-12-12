@@ -336,6 +336,7 @@ you should place your code here."
   ;; (setq org-agenda-files '( ("home/ucizi/org/agenda.org")
   ;;                          ("home/ucizi/org/notes.org") ))
   (setq python-shell-interpreter "python3")
+  (load-file "~/.spacemacs.d/private/gtest-mode.el")
   )
 
 ;; Org-mode hooks
