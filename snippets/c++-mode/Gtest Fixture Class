@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: Gtest Fixture Class
+# key: c_test_f
+# --
+
+class ${1:TestFixture} : public ::testing::Test {
+ public:
+  $1() {}
+
+  void SetUp() {}
+
+  void TearDown() {}
+
+  ~$1() {}
+
+};
