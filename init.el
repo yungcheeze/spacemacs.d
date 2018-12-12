@@ -40,6 +40,7 @@ values."
      (shell :variables
             shell-default-shell 'eshell)
 
+     semantic
      ycmd
      debug
      syntax-checking
@@ -48,13 +49,15 @@ values."
                       auto-completion-idle-delay 0.5)
      imenu-list
 
-     ;; better-defaults
-     ;; markdown
-     ;; spell-checking
+     better-defaults
+     command-log
 
      git
      version-control
+     docker
+
      org
+     markdown
 
      emacs-lisp
 
