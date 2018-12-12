@@ -40,6 +40,7 @@ values."
      (shell :variables
             shell-default-shell 'eshell)
 
+     ycmd
      debug
      syntax-checking
      (auto-completion :variables
@@ -337,6 +338,12 @@ you should place your code here."
   ;;                          ("home/ucizi/org/notes.org") ))
   (setq python-shell-interpreter "python3")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
+
+  (setq ycmd-server-command '("python3" "/home/ucizi/Documents/tmp/ycmd/ycmd"))
+
+  (setq ycmd-global-config "/home/ucizi/.spacemacs.d/ycmd/global_conf.py")
+
+  (add-hook 'c++-mode-hook 'ycmd-mode)
   )
 
 ;; Org-mode hooks
