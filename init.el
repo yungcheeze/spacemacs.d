@@ -32,7 +32,7 @@ values."
    dotspacemacs-mode-line-theme 'spacemacs
 
    dotspacemacs-configuration-layers
-   '(
+   '(yaml
      helm
      (ranger :variables
              ranger-cleanup-on-disable t)
@@ -44,6 +44,7 @@ values."
      ycmd
      debug
      syntax-checking
+     spell-checking
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-idle-delay 0.5)
@@ -56,8 +57,10 @@ values."
      version-control
      docker
 
-     org
+     (org :variables
+          org-enable-github-support t)
      markdown
+     pdf-tools
 
      emacs-lisp
 
