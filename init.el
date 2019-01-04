@@ -350,6 +350,7 @@ you should place your code here."
   (setq ycmd-global-config "/home/ucizi/.spacemacs.d/ycmd/global_conf.py")
 
   (add-hook 'c++-mode-hook 'ycmd-mode)
+  (add-hook 'python-mode-hook 'ycmd-mode)
   )
 
 ;; Org-mode hooks
