@@ -73,7 +73,10 @@ values."
             c-c++-enable-rtags-support t)
      (cmake :variables cmake-enable-cmake-ide-support t)
 
-     python
+     (python :variables
+             python-backend 'anaconda
+             python-test-runner 'pytest
+             python-enable-yapf-format-on-save t)
 
      html
      javascript
@@ -84,6 +87,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
+                                      (jedi :location elpa)
                                       ssh-agency)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -343,6 +347,7 @@ you should place your code here."
   ;; (setq org-agenda-files '( ("home/ucizi/org/agenda.org")
   ;;                          ("home/ucizi/org/notes.org") ))
   (setq python-shell-interpreter "python3")
+  (setq-default pytest-global-name "python -m pytest")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
 
   (setq ycmd-server-command '("python3" "/home/ucizi/Documents/tmp/ycmd/ycmd"))
