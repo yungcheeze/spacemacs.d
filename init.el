@@ -344,8 +344,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;; (setq org-agenda-files '( ("home/ucizi/org/agenda.org")
-  ;;                          ("home/ucizi/org/notes.org") ))
+  (setq org-agenda-files '("home/ucizi/org/agenda.org" "home/ucizi/org/notes.org"))
   (setq python-shell-interpreter "python3")
   (setq-default pytest-global-name "python -m pytest")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
