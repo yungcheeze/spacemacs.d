@@ -358,8 +358,6 @@ you should place your code here."
   (add-hook 'python-mode-hook 'ycmd-mode)
   )
 
-;; Org-mode hooks
-(add-hook 'org-mode-hook 'electric-pair-mode)
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (defun dotspacemacs/emacs-custom-settings ()
