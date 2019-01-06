@@ -32,34 +32,32 @@ values."
    dotspacemacs-mode-line-theme 'spacemacs
 
    dotspacemacs-configuration-layers
-   '(yaml
+   '(
+     better-defaults
+     command-log
      helm
      (ranger :variables
              ranger-cleanup-on-disable t)
      fasd
      (shell :variables
             shell-default-shell 'eshell)
-
-     semantic
-     debug
-     syntax-checking
-     spell-checking
-     (auto-completion :variables
-                      auto-completion-enable-snippets-in-popup t
-                      auto-completion-idle-delay 0.5)
-     imenu-list
-
-     better-defaults
-     command-log
-
      git
      version-control
      docker
 
+     spell-checking
      (org :variables
           org-enable-github-support t)
      markdown
      pdf-tools
+
+     semantic
+     debug
+     syntax-checking
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-idle-delay 0.5)
+     imenu-list
 
      emacs-lisp
 
@@ -76,6 +74,7 @@ values."
              python-test-runner 'pytest
              python-enable-yapf-format-on-save t)
 
+     yaml
      html
      javascript
      node
