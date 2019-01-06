@@ -41,7 +41,6 @@ values."
             shell-default-shell 'eshell)
 
      semantic
-     ycmd
      debug
      syntax-checking
      spell-checking
@@ -69,8 +68,7 @@ values."
             c-c++-enable-clang-support t
             c-c++-enable-clang-format-on-save t
             c-c++-enable-google-style t
-            c-c++-enable-google-newline t
-            c-c++-enable-rtags-support t)
+            c-c++-enable-google-newline t)
      (cmake :variables cmake-enable-cmake-ide-support t)
 
      (python :variables
@@ -348,12 +346,5 @@ you should place your code here."
   (setq python-shell-interpreter "python3")
   (setq-default pytest-global-name "python -m pytest")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
-
-  (setq ycmd-server-command '("python3" "/home/ucizi/Documents/tmp/ycmd/ycmd"))
-
-  (setq ycmd-global-config "/home/ucizi/.spacemacs.d/ycmd/global_conf.py")
-
-  (add-hook 'c++-mode-hook 'ycmd-mode)
-  (add-hook 'python-mode-hook 'ycmd-mode)
   )
 
