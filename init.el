@@ -75,7 +75,8 @@ values."
      (cmake :variables cmake-enable-cmake-ide-support t)
 
      (python :variables
-             python-backend 'anaconda
+             python-pipenv-activate t
+             python-backend 'lsp
              python-test-runner 'pytest
              python-enable-yapf-format-on-save t)
 
