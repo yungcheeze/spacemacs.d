@@ -63,8 +63,12 @@ values."
      emacs-lisp
 
      (c-c++ :variables
+            c-c++-lsp-sem-highlight-method 'overlay
+            c-c++-adopt-subprojects t
+            c-c++-backend 'lsp-cquery
+            c-c++-lsp-executable "/home/ucizi/.local/bin/cquery"
+            c-c++-lsp-sem-highlight-rainbow t
             c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t
             c-c++-enable-clang-format-on-save t
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
