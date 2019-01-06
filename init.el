@@ -51,6 +51,7 @@ values."
      markdown
      pdf-tools
 
+     lsp
      semantic
      debug
      syntax-checking
