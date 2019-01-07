@@ -57,7 +57,7 @@ values."
      syntax-checking
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
-                      auto-completion-idle-delay 0.5)
+                      auto-completion-idle-delay 0.1)
      imenu-list
 
      emacs-lisp
