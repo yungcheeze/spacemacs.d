@@ -65,8 +65,8 @@ values."
      (c-c++ :variables
             c-c++-lsp-sem-highlight-method 'overlay
             c-c++-adopt-subprojects t
-            c-c++-backend 'lsp-cquery
-            c-c++-lsp-executable "/home/ucizi/.local/bin/cquery"
+            c-c++-backend 'lsp-ccls
+            c-c++-lsp-executable "/usr/local/bin/ccls"
             c-c++-lsp-sem-highlight-rainbow t
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-format-on-save t
