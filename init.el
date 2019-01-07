@@ -77,7 +77,7 @@ values."
      (python :variables
              python-pipenv-activate t
              python-backend 'lsp
-             python-test-runner 'pytest
+             python-test-runner 'nose
              python-enable-yapf-format-on-save t)
 
      yaml
@@ -351,7 +351,6 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq org-agenda-files '("home/ucizi/org/agenda.org" "home/ucizi/org/notes.org"))
   (setq python-shell-interpreter "python3")
-  (setq-default pytest-global-name "python -m pytest")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
   )
 
