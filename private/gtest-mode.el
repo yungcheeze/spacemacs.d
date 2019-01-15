@@ -9,33 +9,61 @@
 ;; - Run test interactively
 
 (defgroup gtest nil
-  "gtest group"	
+  "gtest group"
   :group 'tools)
-
 
 (defcustom gtest-target ""
   "gtest target"
   :group 'tools'
   :type 'string)
 
-(defun gtest-list ()
+(defcustom gtest-run-in-test-directory nil
+  "run gtest in test target directory, instead of buffer's directory"
+  :group 'tools'
+  :type 'boolean)
+
+(defvar gtest-current-target nil)
+(defvar gtest-target-history nil)
+
+(defun gtest-run-executable (test-target &rest args)
+  "Run target in its own directory, if enabled, otherwise in current buffer's directory"
+  (let ((default-directory
+         (if gtest-run-in-test-directory
+             (file-name-directory test-target)
+           default-directory)))
+    (shell-command (apply 'concat test-target args))))
+
+(defun gtest-read-target-name ()
+  "Read name of gtest executable to execute"
+  (let* ((start-dir (if gtest-current-target
+                        (file-name-directory gtest-current-target)
+                      default-directory))
+         (start-filename (if gtest-current-target
+                             (file-name-nondirectory gtest-current-target)
+                           ""))
+         (file-name (read-file-name "gtest executable: " start-dir nil nil start-filename)))
+    (setq gtest-current-target file-name)
+    (file-local-name file-name)))
+
+(defun gtest-list (test-target)
   "List all the tests"
-  (interactive)
-  (shell-command (concat gtest-target " --gtest_list_tests" "&")))
+  (interactive (list (gtest-read-target-name)))
+  (gtest-run-executable test-target " --gtest_list_tests" "&"))
 
-(defun gtest-run-all ()
+(defun gtest-run-all (test-target)
   "run all the tests"
-  (interactive)
-  (shell-command (concat gtest-target "&")))
+  (interactive (list (gtest-read-target-name)))
+  (gtest-run-executable test-target "&"))
 
-(defun gtest-run (filter)
+(defun gtest-run (test-target filter)
   "Run gtest as per filter"
   (interactive (list
-		(read-string
-		 (format "filter (%s): "
-			 (concat "*" (thing-at-point 'symbol) "*"))
-			     nil nil (concat"*" (thing-at-point 'symbol) "*"))))
-  (shell-command (concat gtest-target " --gtest_filter=" filter "&")))
+                (gtest-read-target-name)
+                (read-string
+                 (format "filter (%s): "
+                         (concat "*" (thing-at-point 'symbol) "*"))
+                             nil nil (concat"*" (thing-at-point 'symbol) "*"))))
+  (gtest-run-executable test-target " --gtest_filter=" filter "&"))
 
 (defun is-line-at-point-is-test-hierarchy-or-fixture ()
   ""
@@ -105,4 +133,3 @@
 	    (define-key map (kbd "C-M-t") 'gtest-run)
 	    map))
 (provide 'gtest-mode)
-	    
