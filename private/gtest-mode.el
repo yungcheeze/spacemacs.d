@@ -54,18 +54,20 @@
   (setq test (thing-at-point 'line t))
   (when (string-match "TEST.*" test)
     (replace-regexp-in-string
-     " "
+     "{"
      ""
      (replace-regexp-in-string
-      ",[ ]*"
-      "."
+      " "
+      ""
       (replace-regexp-in-string
-       "[)]"
-       ""
-       (replace-regexp-in-string
-	"TEST.*[(]"
-	""
-	test))))))
+       ",[ ]*"
+       "." (replace-regexp-in-string
+            "[)]"
+            ""
+            (replace-regexp-in-string
+	           "TEST.*[(]"
+	           ""
+	           test)))))))
   
 
 (defun search-test-at-point-in-source-file ()
