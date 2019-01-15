@@ -41,6 +41,7 @@ values."
      fasd
      (shell :variables
             shell-default-shell 'eshell)
+     shell-scripts
      git
      version-control
      docker
