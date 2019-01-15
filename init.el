@@ -65,6 +65,7 @@ values."
 
      (c-c++ :variables
             c-c++-lsp-sem-highlight-method 'overlay
+            lsp-ui-sideline-enable nil
             c-c++-adopt-subprojects t
             c-c++-backend 'lsp-ccls
             c-c++-lsp-executable "/usr/local/bin/ccls"
