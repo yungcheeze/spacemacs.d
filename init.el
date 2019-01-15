@@ -355,5 +355,13 @@ you should place your code here."
   (setq org-agenda-files '("/home/ucizi/org/agenda.org" "/home/ucizi/org/notes.org"))
   (setq python-shell-interpreter "python3")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
+
+  (defun copy-compile-commands (&optional compilation-buffer result)
+    (interactive)
+    (copy-file
+     (concat cmake-ide-build-dir "/compile_commands.json")
+     (concat cmake-ide-project-dir "/compile_commands.json")
+     t)
+    )
   )
 
