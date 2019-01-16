@@ -61,8 +61,8 @@
                 (gtest-read-target-name)
                 (read-string
                  (format "filter (%s): "
-                         (concat "*" (thing-at-point 'symbol) "*"))
-                             nil nil (concat"*" (thing-at-point 'symbol) "*"))))
+                         (concat "\"*" (thing-at-point 'symbol) "*\""))
+                 nil nil (concat"\"*" (thing-at-point 'symbol) "*\""))))
   (gtest-run-executable test-target " --gtest_filter=" filter "&"))
 
 (defun is-line-at-point-is-test-hierarchy-or-fixture ()
