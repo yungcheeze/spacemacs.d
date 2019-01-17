@@ -363,5 +363,6 @@ you should place your code here."
      (concat cmake-ide-project-dir "/compile_commands.json")
      t)
     )
+  (add-hook 'c++-mode-hook 'gtest-mode)
   )
 
