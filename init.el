@@ -355,6 +355,7 @@ you should place your code here."
   (setq org-agenda-files '("/home/ucizi/org/agenda.org" "/home/ucizi/org/notes.org"))
   (setq python-shell-interpreter "python3")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
+  (setq gtest-run-in-test-directory t)
 
   (defun copy-compile-commands (&optional compilation-buffer result)
     (interactive)
