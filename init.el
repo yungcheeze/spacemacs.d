@@ -356,6 +356,7 @@ you should place your code here."
   (setq python-shell-interpreter "python3")
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
   (setq gtest-run-in-test-directory t)
+  (add-hook 'c++-mode-hook 'gtest-mode)
 
   (defun copy-compile-commands (&optional compilation-buffer result)
     (interactive)
@@ -364,6 +365,5 @@ you should place your code here."
      (concat cmake-ide-project-dir "/compile_commands.json")
      t)
     )
-  (add-hook 'c++-mode-hook 'gtest-mode)
   )
 
