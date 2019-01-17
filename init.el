@@ -365,5 +365,7 @@ you should place your code here."
      (concat cmake-ide-project-dir "/compile_commands.json")
      t)
     )
+  (require 'keychain-environment)
+  (keychain-refresh-environment)
   )
 
