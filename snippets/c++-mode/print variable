@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: print variable
+# key: cvar
+# --
+std::cout << "$1: " << ${1:var}$2 << std::endl;$0
