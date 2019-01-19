@@ -367,5 +367,7 @@ you should place your code here."
     )
   (require 'keychain-environment)
   (keychain-refresh-environment)
+
+  (setq avy-timeout-seconds 1)
   )
 
