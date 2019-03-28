@@ -371,5 +371,13 @@ you should place your code here."
   (keychain-refresh-environment)
 
   (setq avy-timeout-seconds 1)
+
+  ;; helm tab completion when treemacs is open
+  (with-eval-after-load "helm"
+    (defun helm-persistent-action-display-window (&optional split-onewindow)
+      "Return the window that will be used for persistent action.
+If SPLIT-ONEWINDOW is non-`nil' window is split in persistent action."
+      (with-helm-window
+        (setq helm-persistent-action-display-window (get-mru-window)))))
   )
 
