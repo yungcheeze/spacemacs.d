@@ -93,6 +93,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
+                                      keychain-environment
                                       (jedi :location elpa)
                                       )
    ;; A list of packages that cannot be updated.
@@ -366,7 +367,6 @@ you should place your code here."
      (concat cmake-ide-project-dir "/compile_commands.json")
      t)
     )
-  (require 'keychain-environment)
   (keychain-refresh-environment)
 
   (setq avy-timeout-seconds 1)
