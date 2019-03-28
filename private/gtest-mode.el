@@ -31,7 +31,7 @@
          (if gtest-run-in-test-directory
              (file-name-directory test-target)
            default-directory)))
-    (shell-command (apply 'concat test-target args))))
+    (compile (apply 'concat test-target args))))
 
 (defun gtest-read-target-name ()
   "Read name of gtest executable to execute"
@@ -48,12 +48,12 @@
 (defun gtest-list (test-target)
   "List all the tests"
   (interactive (list (gtest-read-target-name)))
-  (gtest-run-executable test-target " --gtest_list_tests" "&"))
+  (gtest-run-executable test-target " --gtest_list_tests" ))
 
 (defun gtest-run-all (test-target)
   "run all the tests"
   (interactive (list (gtest-read-target-name)))
-  (gtest-run-executable test-target "&"))
+  (gtest-run-executable test-target ))
 
 (defun gtest-run (test-target filter)
   "Run gtest as per filter"
@@ -63,7 +63,7 @@
                  (format "filter (%s): "
                          (concat "\"*" (thing-at-point 'symbol) "*\""))
                  nil nil (concat"\"*" (thing-at-point 'symbol) "*\""))))
-  (gtest-run-executable test-target " --gtest_filter=" filter "&"))
+  (gtest-run-executable test-target " --gtest_filter=" filter ))
 
 (defun is-line-at-point-is-test-hierarchy-or-fixture ()
   ""
