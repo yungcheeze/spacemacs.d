@@ -50,7 +50,7 @@ values."
      (org :variables
           org-enable-github-support t)
      markdown
-     pdf-tools
+     pdf
 
      lsp
      semantic
@@ -62,6 +62,7 @@ values."
      imenu-list
 
      emacs-lisp
+     lua
 
      (c-c++ :variables
             c-c++-lsp-sem-highlight-method 'overlay
