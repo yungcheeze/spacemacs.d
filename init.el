@@ -358,6 +358,8 @@ you should place your code here."
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
   (setq gtest-run-in-test-directory t)
   (add-hook 'c++-mode-hook 'gtest-mode)
+  (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "ta" 'gtest-run-all)
+  (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "tt" 'gtest-run)
 
   (defun copy-compile-commands (&optional compilation-buffer result)
     (interactive)
