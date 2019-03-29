@@ -372,6 +372,8 @@ you should place your code here."
 
   (setq avy-timeout-seconds 1)
 
+  (add-hook 'yas-minor-mode-hook 'electric-pair-local-mode)
+
   ;; helm tab completion when treemacs is open
   (with-eval-after-load "helm"
     (defun helm-persistent-action-display-window (&optional split-onewindow)
