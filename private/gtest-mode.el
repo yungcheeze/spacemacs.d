@@ -12,8 +12,8 @@
   "gtest group"
   :group 'tools)
 
-(defcustom gtest-target ""
-  "gtest target"
+(defcustom gtest-target-dir nil
+  "directory containing gtest executables"
   :group 'tools'
   :type 'string)
 
@@ -35,9 +35,7 @@
 
 (defun gtest-read-target-name ()
   "Read name of gtest executable to execute"
-  (let* ((start-dir (if gtest-current-target
-                        (file-name-directory gtest-current-target)
-                      default-directory))
+  (let* ((start-dir (if gtest-target-dir gtest-target-dir default-directory))
          (start-filename (if gtest-current-target
                              (file-name-nondirectory gtest-current-target)
                            ""))
