@@ -34,19 +34,23 @@ values."
    dotspacemacs-configuration-layers
    '(
      better-defaults
+
      command-log
      helm
      (ranger :variables
              ranger-cleanup-on-disable t)
      fasd
+
      (shell :variables
             shell-default-shell 'eshell)
      shell-scripts
+
      git
      version-control
      docker
 
      spell-checking
+
      (org :variables
           org-enable-github-support t)
      markdown
