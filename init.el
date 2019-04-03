@@ -100,6 +100,7 @@ values."
    dotspacemacs-additional-packages '(
                                       keychain-environment
                                       (jedi :location elpa)
+                                      exec-path-from-shell
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -400,5 +401,7 @@ you should place your code here."
 If SPLIT-ONEWINDOW is non-`nil' window is split in persistent action."
       (with-helm-window
         (setq helm-persistent-action-display-window (get-mru-window)))))
+
+  (exec-path-from-shell-initialize)
   )
 
