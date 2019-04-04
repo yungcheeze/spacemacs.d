@@ -403,5 +403,7 @@ If SPLIT-ONEWINDOW is non-`nil' window is split in persistent action."
         (setq helm-persistent-action-display-window (get-mru-window)))))
 
   (exec-path-from-shell-initialize)
+
+  (add-to-list 'auto-mode-alist '("\\lfrc\\'" . conf-mode))
   )
 
