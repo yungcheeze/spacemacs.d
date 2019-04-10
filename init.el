@@ -49,7 +49,12 @@ This function should only modify configuration layer settings."
      spell-checking
      syntax-checking
      version-control
-     python
+
+     lsp
+     (python :variables
+             python-backend 'lsp
+             python-test-runner 'pytest
+             python-enable-yapf-format-on-save t)
      )
 
    ;; List of additional packages that will be installed without being
