@@ -54,7 +54,8 @@ This function should only modify configuration layer settings."
      (python :variables
              python-backend 'lsp
              python-test-runner 'pytest
-             python-enable-yapf-format-on-save t)
+             python-enable-yapf-format-on-save t
+             python-auto-set-local-pyvenv-virtualenv nil)
      (cmake :variables cmake-enable-cmake-ide-support t)
      (c-c++ :variables
             lsp-ui-sideline-enable nil
