@@ -472,4 +472,10 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq magit-save-repository-buffers 'dontask)
   (setq pytest-global-name "python3 -m pytest")
+
+  (load-file "~/.spacemacs.d/private/gtest-mode.el")
+  (setq gtest-run-in-test-directory t)
+  (add-hook 'c++-mode-hook 'gtest-mode)
+  (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "ta" 'gtest-run-all)
+  (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "tt" 'gtest-run)
   )
