@@ -55,6 +55,16 @@ This function should only modify configuration layer settings."
              python-backend 'lsp
              python-test-runner 'pytest
              python-enable-yapf-format-on-save t)
+     (cmake :variables cmake-enable-cmake-ide-support t)
+     (c-c++ :variables
+            lsp-ui-sideline-enable nil
+            c-c++-adopt-subprojects t
+            c-c++-backend 'lsp-ccls
+            c-c++-lsp-executable "/home/ucizi/bin/ccls"
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-format-on-save t
+            c-c++-enable-google-style t
+            c-c++-enable-google-newline t)
      )
 
    ;; List of additional packages that will be installed without being
