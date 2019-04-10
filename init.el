@@ -35,7 +35,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(
      helm
-     ;; auto-completion
+     auto-completion
      emacs-lisp
      git
      ;; markdown
