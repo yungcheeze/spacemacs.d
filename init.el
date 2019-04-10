@@ -494,4 +494,7 @@ before packages are loaded."
   (add-hook 'yas-minor-mode-hook 'electric-pair-local-mode)
 
   (add-to-list 'auto-mode-alist '("\\lfrc\\'" . conf-mode))
+
+  (spacemacs|do-after-display-system-init
+   (spacemacs-modeline/init-spaceline))
   )
