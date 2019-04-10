@@ -38,16 +38,17 @@ This function should only modify configuration layer settings."
      auto-completion
      emacs-lisp
      git
-     ;; markdown
+     markdown
      multiple-cursors
      treemacs
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+     org
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     spell-checking
+     syntax-checking
+     version-control
+     python
      )
 
    ;; List of additional packages that will be installed without being
