@@ -478,4 +478,12 @@ before packages are loaded."
   (add-hook 'c++-mode-hook 'gtest-mode)
   (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "ta" 'gtest-run-all)
   (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "tt" 'gtest-run)
+
+  (defun copy-compile-commands (&optional compilation-buffer result)
+    (interactive)
+    (copy-file
+     (concat cmake-ide-build-dir "/compile_commands.json")
+     (concat cmake-ide-project-dir "/compile_commands.json")
+     t)
+    )
   )
