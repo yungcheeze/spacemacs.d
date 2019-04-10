@@ -471,4 +471,5 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq magit-save-repository-buffers 'dontask)
+  (setq pytest-global-name "python3 -m pytest")
   )
