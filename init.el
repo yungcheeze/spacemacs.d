@@ -453,4 +453,5 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (setq magit-save-repository-buffers 'dontask)
   )
