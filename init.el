@@ -35,17 +35,20 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(
      helm
+     fasd
      auto-completion
      better-defaults
      emacs-lisp
      git
      markdown
+     pdf
      multiple-cursors
      treemacs
      org
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
+     shell-scripts
      spell-checking
      syntax-checking
      version-control
@@ -66,6 +69,7 @@ This function should only modify configuration layer settings."
             c-c++-enable-clang-format-on-save t
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
+     lua
      )
 
    ;; List of additional packages that will be installed without being
