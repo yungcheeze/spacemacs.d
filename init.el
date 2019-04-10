@@ -36,7 +36,6 @@ This function should only modify configuration layer settings."
    '(
      helm
      ;; auto-completion
-     ;; better-defaults
      emacs-lisp
      git
      ;; markdown
