@@ -486,4 +486,6 @@ before packages are loaded."
      (concat cmake-ide-project-dir "/compile_commands.json")
      t)
     )
+
+  (add-hook 'yas-minor-mode-hook 'electric-pair-local-mode)
   )
