@@ -47,6 +47,7 @@ This function should only modify configuration layer settings."
      treemacs
      org
      (shell :variables
+            shell-default-shell 'multi-term
             shell-default-height 30
             shell-default-position 'bottom)
      shell-scripts
