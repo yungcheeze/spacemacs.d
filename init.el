@@ -37,6 +37,9 @@ This function should only modify configuration layer settings."
      helm
      fasd
      ranger
+     (treemacs :variables
+               treemacs-use-follow-mode nil
+               treemacs-use-filewatch-mode t)
      auto-completion
      better-defaults
      emacs-lisp
@@ -45,7 +48,10 @@ This function should only modify configuration layer settings."
      pdf
      multiple-cursors
      treemacs
-     org
+     (org :variables
+          org-enable-github-support t
+          org-enable-bootstrap-support t
+          org-projectile-file "~/Dropbox/org/PROJECTS.org")
      (shell :variables
             shell-default-shell 'multi-term
             shell-default-height 30
