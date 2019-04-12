@@ -36,6 +36,7 @@ This function should only modify configuration layer settings."
    '(
      helm
      fasd
+     ranger
      auto-completion
      better-defaults
      emacs-lisp
@@ -53,6 +54,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      version-control
 
+     semantic
      lsp
      (python :variables
              python-backend 'lsp
