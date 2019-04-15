@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: std::get
+# key: get
+# --
+std::get<${1:0}>(${2:container})$0
