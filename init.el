@@ -44,7 +44,8 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-     markdown
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
      pdf
      multiple-cursors
      treemacs
@@ -60,6 +61,7 @@ This function should only modify configuration layer settings."
      spell-checking
      syntax-checking
      version-control
+     chrome
 
      semantic
      lsp
@@ -79,6 +81,7 @@ This function should only modify configuration layer settings."
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
      lua
+     html
      )
 
    ;; List of additional packages that will be installed without being
