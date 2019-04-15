@@ -78,6 +78,7 @@ This function should only modify configuration layer settings."
             c-c++-lsp-executable "/home/ucizi/bin/ccls"
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-format-on-save t
+            clang-format-style "Google"
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
      lua
