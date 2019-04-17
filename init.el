@@ -64,6 +64,10 @@ This function should only modify configuration layer settings."
      version-control
      chrome
      copy-as-format
+     themes-megapack
+     ibuffer
+     search-engine
+     restclient
 
      semantic
      lsp
