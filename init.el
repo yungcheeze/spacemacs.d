@@ -518,9 +518,6 @@ before packages are loaded."
 
   (add-to-list 'auto-mode-alist '("\\lfrc\\'" . conf-mode))
 
-  (spacemacs|do-after-display-system-init
-   (spacemacs-modeline/init-spaceline))
-
   ;; helm tab completion when treemacs is open
   (with-eval-after-load "helm"
     (defun helm-persistent-action-display-window (&optional split-onewindow)
