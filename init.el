@@ -85,6 +85,7 @@ This function should only modify configuration layer settings."
             c-c++-enable-google-newline t)
      lua
      html
+     json
      )
 
    ;; List of additional packages that will be installed without being
