@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
      (treemacs :variables
                treemacs-use-follow-mode nil
                treemacs-use-filewatch-mode t)
+     bm
      auto-completion
      better-defaults
      emacs-lisp
