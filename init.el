@@ -63,6 +63,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      version-control
      chrome
+     copy-as-format
 
      semantic
      lsp
