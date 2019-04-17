@@ -498,7 +498,6 @@ before packages are loaded."
   (spacemacs/dap-bind-keys-for-mode 'lsp-mode)
 
   (exec-path-from-shell-initialize)
-  (setq magit-save-repository-buffers 'dontask)
   (setq pytest-global-name "python3 -m pytest")
 
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
