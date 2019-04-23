@@ -66,6 +66,7 @@ This function should only modify configuration layer settings."
      copy-as-format
      themes-megapack
      ibuffer
+     imenu-list
      search-engine
      restclient
 
@@ -89,6 +90,7 @@ This function should only modify configuration layer settings."
             clang-format-style "Google"
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
+     (sql :variables sql-capitalize-keywords t)
      lua
      html
      json
