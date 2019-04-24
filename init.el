@@ -53,7 +53,8 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-github-support t
           org-enable-bootstrap-support t
-          org-projectile-file "~/Dropbox/org/PROJECTS.org")
+          org-projectile-file "~/Dropbox/org/PROJECTS.org"
+          org-projectile-capture-template "* TODO %?\n  %a")
      (shell :variables
             shell-default-shell 'multi-term
             shell-default-height 30
