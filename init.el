@@ -506,6 +506,8 @@ before packages are loaded."
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
   (setq gtest-run-in-test-directory t)
   (add-hook 'c++-mode-hook 'gtest-mode)
+
+  (spacemacs/declare-prefix-for-mode 'c++-mode "mt" "gtest")
   (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "ta" 'gtest-run-all)
   (spacemacs/set-leader-keys-for-minor-mode 'gtest-mode "tt" 'gtest-run)
 
