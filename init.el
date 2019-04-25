@@ -77,6 +77,7 @@ This function should only modify configuration layer settings."
 
    dotspacemacs-additional-packages '(
                                       exec-path-from-shell
+                                      ascii-art-to-unicode
                                       )
 
    dotspacemacs-frozen-packages '()
@@ -214,6 +215,20 @@ before packages are loaded."
   (add-hook 'yas-minor-mode-hook 'electric-pair-local-mode)
 
   (add-to-list 'auto-mode-alist '("\\lfrc\\'" . conf-mode))
+
+  ;; use unicode art for org-brain
+  (defface aa2u-face '((t . nil))
+    "Face for aa2u box drawing characters")
+  (advice-add #'aa2u-1c :filter-return
+              (lambda (str) (propertize str 'face 'aa2u-face)))
+  (defun aa2u-org-brain-buffer ()
+    (let ((inhibit-read-only t))
+      (make-local-variable 'face-remapping-alist)
+      (add-to-list 'face-remapping-alist
+                   '(aa2u-face . org-brain-wires))
+      (ignore-errors (aa2u (point-min) (point-max)))))
+  (with-eval-after-load 'org-brain
+    (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
 
   ;; helm tab completion when treemacs is open
   (with-eval-after-load "helm"
