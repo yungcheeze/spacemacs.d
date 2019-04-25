@@ -31,6 +31,7 @@ This function should only modify configuration layer settings."
           org-enable-github-support t
           org-enable-bootstrap-support t
           org-projectile-file "~/Dropbox/org/PROJECTS.org"
+          org-brain-path "~/Dropbox/org/brain"
           org-projectile-capture-template "* TODO %?\n  %a")
      (shell :variables
             shell-default-shell 'multi-term
