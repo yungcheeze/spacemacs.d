@@ -32,7 +32,10 @@ This function should only modify configuration layer settings."
           org-enable-bootstrap-support t
           org-projectile-file "~/Dropbox/org/PROJECTS.org"
           org-brain-path "~/Dropbox/org/brain"
-          org-projectile-capture-template "* TODO %?\n  %a")
+          org-projectile-capture-template "* TODO %?\n  %a"
+          org-enable-org-journal-support t
+          org-journal-dir "~/Dropbox/org/journal"
+          )
      (shell :variables
             shell-default-shell 'multi-term
             shell-default-height 30
