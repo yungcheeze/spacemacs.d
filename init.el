@@ -52,6 +52,7 @@ This function should only modify configuration layer settings."
      search-engine
      restclient
 
+     semantic
      lsp
      (dap :variables
           dap-python-executable "python3")
