@@ -1,0 +1,9 @@
+# key: test_stub
+# name: test_stub
+# --
+#include <gmock/gmock.h>
+
+namespace {
+using namespace testing;
+$0
+}
