@@ -63,7 +63,7 @@ This function should only modify configuration layer settings."
             lsp-ui-sideline-enable nil
             c-c++-adopt-subprojects t
             c-c++-backend 'lsp-ccls
-            c-c++-lsp-executable "/home/ucizi/bin/ccls"
+            c-c++-lsp-executable "/usr/bin/ccls"
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-format-on-save t
             clang-format-style "Google"
