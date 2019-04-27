@@ -78,6 +78,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
                                       exec-path-from-shell
                                       ascii-art-to-unicode
+                                      keychain-environment
                                       )
 
    dotspacemacs-frozen-packages '()
@@ -193,7 +194,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (keychain-refresh-environment)
   (exec-path-from-shell-initialize)
+
   (setq pytest-global-name "python3 -m pytest")
 
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
