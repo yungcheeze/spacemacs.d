@@ -73,6 +73,7 @@ This function should only modify configuration layer settings."
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
      (sql :variables sql-capitalize-keywords t)
+     haskell
      lua
      html
      json
