@@ -22,6 +22,8 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
+     github
+     version-control
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      pdf
@@ -43,7 +45,6 @@ This function should only modify configuration layer settings."
      shell-scripts
      spell-checking
      syntax-checking
-     version-control
      chrome
      copy-as-format
      themes-megapack
