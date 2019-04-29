@@ -47,7 +47,6 @@ This function should only modify configuration layer settings."
      syntax-checking
      chrome
      copy-as-format
-     themes-megapack
      ibuffer
      imenu-list
      search-engine
