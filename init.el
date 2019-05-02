@@ -105,7 +105,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-elpa-subdirectory 'emacs-version
    dotspacemacs-editing-style 'hybrid
    dotspacemacs-verbose-loading nil
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner 999
    dotspacemacs-startup-lists '((recents . 5)
                                 (projects . 7))
    dotspacemacs-startup-buffer-responsive t
