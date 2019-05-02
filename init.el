@@ -81,6 +81,7 @@ This function should only modify configuration layer settings."
      lua
      html
      json
+     yaml
      )
 
    dotspacemacs-additional-packages '(
