@@ -59,7 +59,11 @@ This function should only modify configuration layer settings."
      (python :variables
              python-backend 'lsp
              python-test-runner 'pytest
-             python-enable-yapf-format-on-save t
+             python-formatter 'yapf
+             python-format-on-save t
+             python-sort-imports-on-save t
+             python-pipenv-activate t
+             importmagic-python-interpreter "python3"
              python-auto-set-local-pyvenv-virtualenv nil)
      (cmake :variables cmake-enable-cmake-ide-support t)
      (c-c++ :variables
