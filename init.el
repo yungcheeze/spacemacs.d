@@ -61,10 +61,7 @@ This function should only modify configuration layer settings."
              python-test-runner 'pytest
              python-formatter 'yapf
              python-format-on-save t
-             python-sort-imports-on-save t
-             python-pipenv-activate t
-             importmagic-python-interpreter "python3"
-             python-auto-set-local-pyvenv-virtualenv nil)
+             python-sort-imports-on-save t)
      (cmake :variables cmake-enable-cmake-ide-support t)
      (c-c++ :variables
             lsp-ui-sideline-enable nil
