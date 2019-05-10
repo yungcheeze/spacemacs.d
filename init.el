@@ -163,7 +163,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-enable-server t
    dotspacemacs-server-socket-dir nil
    dotspacemacs-persistent-server nil
-   dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
+   dotspacemacs-search-tools '("ag" "rg" "pt" "ack" "grep")
    dotspacemacs-frame-title-format "%t::%b"
    dotspacemacs-icon-title-format nil
    dotspacemacs-whitespace-cleanup 'all
