@@ -79,6 +79,7 @@ This function should only modify configuration layer settings."
      html
      json
      yaml
+     csv
      )
 
    dotspacemacs-additional-packages '(
