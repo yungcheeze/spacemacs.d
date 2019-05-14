@@ -61,6 +61,8 @@ This function should only modify configuration layer settings."
              python-test-runner 'pytest
              python-formatter 'yapf
              python-format-on-save t
+             pytest-cmd-flags "-x -s"
+             pytest-global-name "python3 -m pytest"
              python-sort-imports-on-save t)
      (cmake :variables cmake-enable-cmake-ide-support t)
      (c-c++ :variables
@@ -204,7 +206,18 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
-  (setq pytest-global-name "python3 -m pytest")
+
+  (defun pytest-run-slow-tests()
+    (interactive)
+    (pytest-all (concat pytest-cmd-flags " -m slow")))
+  (defun pytest-run-fast-tests()
+    (interactive)
+    (pytest-all (concat pytest-cmd-flags " -m 'not slow'")))
+  (spacemacs/declare-prefix-for-mode 'python-mode "mte" "test-extras")
+  (spacemacs/set-leader-keys-for-major-mode 'python-mode
+    "tes" 'pytest-run-slow-tests
+    "tef" 'pytest-run-fast-tests)
+
 
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
   (setq gtest-run-in-test-directory t)
