@@ -207,16 +207,20 @@ before packages are loaded."
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
 
+  (defun pytest-run-marked-tests(marker-expression)
+    (interactive(list(read-string "marker expression: ")))
+    (pytest-all (concat pytest-cmd-flags (concat " -m '" marker-expression "'") )))
   (defun pytest-run-slow-tests()
     (interactive)
     (pytest-all (concat pytest-cmd-flags " -m slow")))
   (defun pytest-run-fast-tests()
     (interactive)
-    (pytest-all (concat pytest-cmd-flags " -m 'not slow'")))
+    (pytest-all (concat pytest-cmd-flags " -m 'not slow and not live'")))
   (spacemacs/declare-prefix-for-mode 'python-mode "mte" "test-extras")
   (spacemacs/set-leader-keys-for-major-mode 'python-mode
     "tes" 'pytest-run-slow-tests
-    "tef" 'pytest-run-fast-tests)
+    "tef" 'pytest-run-fast-tests
+    "tem" 'pytest-run-marked-tests)
 
 
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
