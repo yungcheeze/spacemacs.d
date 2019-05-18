@@ -40,6 +40,7 @@ This function should only modify configuration layer settings."
           )
      (shell :variables
             shell-default-shell 'multi-term
+            multi-term-program "/bin/bash"
             shell-default-height 30
             shell-default-position 'bottom)
      shell-scripts
