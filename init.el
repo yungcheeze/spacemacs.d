@@ -210,6 +210,8 @@ before packages are loaded."
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
 
+  (use-package pytest
+    :commands (pytest-run))
   (defun pyvenv-load-local-virtualenv ()
       (interactive)
       (spacemacs//pyvenv-mode-set-local-virtualenv)
@@ -217,18 +219,26 @@ before packages are loaded."
   (spacemacs/set-leader-keys-for-major-mode 'python-mode
     "vr" 'pyvenv-load-local-virtualenv)
 
+  (defvar pytest-unit-tests-dir "unit_tests"
+    "Directory containing unit tests. Must be relative to projectile root")
+
   (defun pytest-run-marked-tests(marker-expression)
     (interactive(list(read-string "marker expression: ")))
     (pytest-all (concat pytest-cmd-flags (concat " -m '" marker-expression "'") )))
   (defun pytest-run-slow-tests()
     (interactive)
-    (pytest-all (concat pytest-cmd-flags " -m slow")))
+    (pytest-run pytest-unit-tests-dir (concat pytest-cmd-flags " -m slow")))
   (defun pytest-run-fast-tests()
     (interactive)
-    (pytest-all (concat pytest-cmd-flags " -m 'not slow and not live'")))
+    (pytest-run pytest-unit-tests-dir (concat pytest-cmd-flags " -m 'not slow'")))
+  (defun pytest-run-unit-tests()
+    (interactive)
+    (pytest-run pytest-unit-tests-dir pytest-cmd-flags))
+
   (spacemacs/declare-prefix-for-mode 'python-mode "mte" "test-extras")
   (spacemacs/set-leader-keys-for-major-mode 'python-mode
     "tes" 'pytest-run-slow-tests
+    "teu" 'pytest-run-unit-tests
     "tef" 'pytest-run-fast-tests
     "tem" 'pytest-run-marked-tests)
 
