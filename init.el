@@ -62,7 +62,7 @@ This function should only modify configuration layer settings."
              python-test-runner 'pytest
              python-formatter 'yapf
              python-format-on-save t
-             pytest-cmd-flags "-x -s"
+             pytest-cmd-flags "-x -s -v"
              pytest-global-name "python3 -m pytest"
              python-sort-imports-on-save t
              python-auto-set-local-pyenv-version nil
