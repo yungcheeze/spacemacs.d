@@ -64,7 +64,9 @@ This function should only modify configuration layer settings."
              python-format-on-save t
              pytest-cmd-flags "-x -s"
              pytest-global-name "python3 -m pytest"
-             python-sort-imports-on-save t)
+             python-sort-imports-on-save t
+             python-auto-set-local-pyenv-version nil
+             python-auto-set-local-pyvenv-virtualenv nil)
      (cmake :variables cmake-enable-cmake-ide-support t)
      (c-c++ :variables
             lsp-ui-sideline-enable nil
@@ -207,6 +209,13 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
+
+  (defun pyvenv-load-local-virtualenv ()
+      (interactive)
+      (spacemacs//pyvenv-mode-set-local-virtualenv)
+      (revert-buffer t t))
+  (spacemacs/set-leader-keys-for-major-mode 'python-mode
+    "vr" 'pyvenv-load-local-virtualenv)
 
   (defun pytest-run-marked-tests(marker-expression)
     (interactive(list(read-string "marker expression: ")))
