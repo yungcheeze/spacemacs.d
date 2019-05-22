@@ -218,6 +218,11 @@ before packages are loaded."
   (unless (file-exists-p (concat spacemacs-cache-directory "undo"))
     (make-directory (concat spacemacs-cache-directory "undo")))
 
+  (spacemacs/declare-prefix "y" "copy")
+  (spacemacs/set-leader-keys
+    "yy" 'avy-copy-line
+    "yr" 'avy-copy-region)
+
   (use-package pytest
     :commands (pytest-run))
   (defun pyvenv-load-local-virtualenv ()
