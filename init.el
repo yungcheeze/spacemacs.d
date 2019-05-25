@@ -51,7 +51,8 @@ This function should only modify configuration layer settings."
      ibuffer
      imenu-list
      search-engine
-     restclient
+     (restclient :variables
+                 restclient-use-org t)
 
      semantic
      lsp
