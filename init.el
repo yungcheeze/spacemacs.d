@@ -229,6 +229,7 @@ before packages are loaded."
   (defun pyvenv-load-local-virtualenv ()
       (interactive)
       (spacemacs//pyvenv-mode-set-local-virtualenv)
+      (lsp-restart-workspace)
       (revert-buffer t t))
   (spacemacs/set-leader-keys-for-major-mode 'python-mode
     "vr" 'pyvenv-load-local-virtualenv)
