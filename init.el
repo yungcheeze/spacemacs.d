@@ -86,6 +86,7 @@ This function should only modify configuration layer settings."
      json
      yaml
      csv
+     nginx
      )
 
    dotspacemacs-additional-packages '(
