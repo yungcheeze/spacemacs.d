@@ -212,14 +212,6 @@ before packages are loaded."
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
 
-  ;; formatting on save messes with undo tree
-  ;; try out fix from (https://github.com/syl20bnr/spacemacs/issues/774)
-  (setq undo-tree-auto-save-history t
-        undo-tree-history-directory-alist
-        `(("." . ,(concat spacemacs-cache-directory "undo"))))
-  (unless (file-exists-p (concat spacemacs-cache-directory "undo"))
-    (make-directory (concat spacemacs-cache-directory "undo")))
-
   (spacemacs/declare-prefix "y" "copy")
   (spacemacs/set-leader-keys
     "yy" 'avy-copy-line
