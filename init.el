@@ -12,12 +12,10 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(
      helm
-     fasd
      ranger
      (treemacs :variables
                treemacs-use-follow-mode nil
                treemacs-use-filewatch-mode t)
-     bm
      auto-completion
      better-defaults
      emacs-lisp
@@ -28,7 +26,6 @@ This function should only modify configuration layer settings."
                markdown-live-preview-engine 'vmd)
      pdf
      multiple-cursors
-     treemacs
      (org :variables
           org-enable-github-support t
           org-enable-bootstrap-support t
@@ -46,10 +43,7 @@ This function should only modify configuration layer settings."
      shell-scripts
      spell-checking
      syntax-checking
-     chrome
      copy-as-format
-     ibuffer
-     imenu-list
      search-engine
      (restclient :variables
                  restclient-use-org t)
@@ -60,7 +54,6 @@ This function should only modify configuration layer settings."
           dap-python-executable "python3")
      (python :variables
              python-backend 'lsp
-             python-lsp-server 'pyls
              python-test-runner 'pytest
              python-formatter 'yapf
              python-format-on-save t
@@ -83,7 +76,6 @@ This function should only modify configuration layer settings."
             c-c++-enable-google-newline t)
      (sql :variables sql-capitalize-keywords t)
      haskell
-     lua
      html
      json
      yaml
