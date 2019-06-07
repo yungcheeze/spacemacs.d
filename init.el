@@ -65,6 +65,7 @@ This function should only modify configuration layer settings."
              python-format-on-save t
              pytest-cmd-flags "-x -s -v"
              pytest-global-name "python3 -m pytest"
+             python-shell-interpreter "python3"
              python-sort-imports-on-save t
              python-auto-set-local-pyenv-version nil
              python-auto-set-local-pyvenv-virtualenv nil)
