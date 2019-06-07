@@ -217,7 +217,7 @@ before packages are loaded."
 
   (spacemacs/declare-prefix "y" "copy")
   (spacemacs/set-leader-keys
-    "yy" 'avy-copy-line
+    "yl" 'avy-copy-line
     "yr" 'avy-copy-region
     "ym" 'avy-move-line)
 
