@@ -218,7 +218,8 @@ before packages are loaded."
   (spacemacs/declare-prefix "y" "copy")
   (spacemacs/set-leader-keys
     "yy" 'avy-copy-line
-    "yr" 'avy-copy-region)
+    "yr" 'avy-copy-region
+    "ym" 'avy-move-line)
 
   (use-package pytest
     :commands (pytest-run))
