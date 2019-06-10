@@ -112,7 +112,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-verify-spacelpa-archives nil
    dotspacemacs-check-for-update nil
    dotspacemacs-elpa-subdirectory 'emacs-version
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'emacs
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
    dotspacemacs-startup-lists '((recents . 5)
