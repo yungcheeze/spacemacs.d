@@ -204,22 +204,29 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (drag-stuff-global-mode 1)
 
-  (define-key drag-stuff-mode-map (kbd "M-p") 'drag-stuff-up)
-  (define-key drag-stuff-mode-map (kbd "M-n") 'drag-stuff-down)
-  (define-key drag-stuff-mode-map (kbd "M-N") 'drag-stuff-right)
-  (define-key drag-stuff-mode-map (kbd "M-P") 'drag-stuff-left)
+  (drag-stuff-global-mode 1)
+  (drag-stuff-define-keys)
 
   (global-undo-tree-mode -1)
+
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
 
   (spacemacs/declare-prefix "y" "copy")
+  (spacemacs/declare-prefix "ys" "surround")
+  (spacemacs/declare-prefix "yd" "drag-stuff")
+
   (spacemacs/set-leader-keys
     "yl" 'avy-copy-line
     "yr" 'avy-copy-region
-    "ym" 'avy-move-line)
+    "ym" 'avy-move-line
+    "yss" 'evil-surround-edit
+    "ysd" 'evil-surround-delete
+    "ydp" 'drag-stuff-up
+    "ydn" 'drag-stuff-down
+    "ydP" 'drag-stuff-left
+    "ydN" 'drag-stuff-right)
 
   (use-package pytest
     :commands (pytest-run))
