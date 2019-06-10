@@ -88,6 +88,7 @@ This function should only modify configuration layer settings."
                                       ascii-art-to-unicode
                                       ox-slack
                                       keychain-environment
+                                      drag-stuff
                                       )
 
    dotspacemacs-frozen-packages '()
@@ -203,6 +204,13 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (drag-stuff-global-mode 1)
+
+  (define-key drag-stuff-mode-map (kbd "M-p") 'drag-stuff-up)
+  (define-key drag-stuff-mode-map (kbd "M-n") 'drag-stuff-down)
+  (define-key drag-stuff-mode-map (kbd "M-N") 'drag-stuff-right)
+  (define-key drag-stuff-mode-map (kbd "M-P") 'drag-stuff-left)
+
   (global-undo-tree-mode -1)
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
