@@ -253,6 +253,11 @@ before packages are loaded."
     "tef" 'pytest-run-fast-tests
     "tem" 'pytest-run-marked-tests)
 
+  (add-hook 'python-mode-hook
+            (lambda ()
+              (local-set-key (kbd "C-<") 'python-indent-shift-left)
+              (local-set-key (kbd "C->") 'python-indent-shift-right)))
+
 
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
   (setq gtest-run-in-test-directory t)
