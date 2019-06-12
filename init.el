@@ -12,7 +12,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(
      helm
-     ranger
+
      (treemacs :variables
                treemacs-use-follow-mode nil
                treemacs-use-filewatch-mode t)
@@ -54,14 +54,13 @@ This function should only modify configuration layer settings."
           dap-python-executable "python3")
      (python :variables
              python-backend 'lsp
-             python-lsp-server 'mspyls
-             python-lsp-git-root "~/tmp/python-language-server"
+             ;; python-lsp-server 'mspyls
+             ;; python-lsp-git-root "~/tmp/python-language-server"
              python-test-runner 'pytest
              python-formatter 'yapf
              python-format-on-save t
              pytest-cmd-flags "-x -s -vv"
              pytest-global-name "python3 -m pytest"
-             python-shell-interpreter "python3"
              python-sort-imports-on-save t
              python-auto-set-local-pyenv-version nil
              python-auto-set-local-pyvenv-virtualenv nil)
@@ -91,6 +90,7 @@ This function should only modify configuration layer settings."
                                       ox-slack
                                       keychain-environment
                                       drag-stuff
+                                      swap-regions
                                       )
 
    dotspacemacs-frozen-packages '()
@@ -161,7 +161,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers nil
    dotspacemacs-folding-method 'evil
-   dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smartparens-strict-mode t
    dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-enable-server t
@@ -210,6 +210,7 @@ before packages are loaded."
   (drag-stuff-global-mode 1)
   (setq-default shift-select-mode nil)
   (global-undo-tree-mode -1)
+  (global-evil-surround-mode 1)
 
   (exec-path-from-shell-initialize)
   (keychain-refresh-environment)
@@ -224,6 +225,7 @@ before packages are loaded."
     "ym" 'avy-move-line
     "yss" 'evil-surround-edit
     "ysd" 'evil-surround-delete
+    "ysr" 'evil-surround-region
     "ydp" 'drag-stuff-up
     "ydn" 'drag-stuff-down
     "ydP" 'drag-stuff-left
