@@ -53,9 +53,7 @@ This function should only modify configuration layer settings."
      (dap :variables
           dap-python-executable "python3")
      (python :variables
-             python-backend 'lsp
-             ;; python-lsp-server 'mspyls
-             ;; python-lsp-git-root "~/tmp/python-language-server"
+             python-backend 'anaconda
              python-test-runner 'pytest
              python-formatter 'yapf
              python-format-on-save t
