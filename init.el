@@ -224,6 +224,7 @@ before packages are loaded."
     "yss" 'evil-surround-edit
     "ysd" 'evil-surround-delete
     "ysr" 'evil-surround-region
+    "ysc" 'evil-surround-change
     "ydp" 'drag-stuff-up
     "ydn" 'drag-stuff-down
     "ydP" 'drag-stuff-left
