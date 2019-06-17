@@ -11,7 +11,7 @@ This function should only modify configuration layer settings."
 
    dotspacemacs-configuration-layers
    '(
-     helm
+     ivy
 
      (treemacs :variables
                treemacs-use-follow-mode nil
@@ -301,11 +301,4 @@ before packages are loaded."
   (with-eval-after-load 'org-brain
     (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
 
-  ;; helm tab completion when treemacs is open
-  (with-eval-after-load "helm"
-    (defun helm-persistent-action-display-window (&optional split-onewindow)
-      "Return the window that will be used for persistent action.
-If SPLIT-ONEWINDOW is non-`nil' window is split in persistent action."
-      (with-helm-window
-        (setq helm-persistent-action-display-window (get-mru-window)))))
-  )
+)
