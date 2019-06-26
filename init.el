@@ -80,6 +80,7 @@ This function should only modify configuration layer settings."
      yaml
      csv
      nginx
+     docker
      )
 
    dotspacemacs-additional-packages '(
