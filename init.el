@@ -79,6 +79,7 @@ This function should only modify configuration layer settings."
      json
      yaml
      csv
+     groovy
      nginx
      docker
      nixos
