@@ -81,6 +81,7 @@ This function should only modify configuration layer settings."
      csv
      nginx
      docker
+     nixos
      )
 
    dotspacemacs-additional-packages '(
