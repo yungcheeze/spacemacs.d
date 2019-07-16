@@ -234,6 +234,7 @@ before packages are loaded."
     "ydN" 'drag-stuff-right)
 
   (spacemacs/set-leader-keys "se" 'iedit-mode)
+
   (use-package pytest
     :commands (pytest-run))
   (defun pyvenv-load-local-virtualenv ()
@@ -306,4 +307,13 @@ before packages are loaded."
   (with-eval-after-load 'org-brain
     (add-hook 'org-brain-after-visualize-hook #'aa2u-org-brain-buffer))
 
+  (defun eval-and-replace ()
+    "Replace the preceding sexp with its value."
+    (interactive)
+    (backward-kill-sexp)
+    (condition-case nil
+        (prin1 (eval (read (current-kill 0)))
+               (current-buffer))
+      (error (message "Invalid expression")
+             (insert (current-kill 0)))))
 )
