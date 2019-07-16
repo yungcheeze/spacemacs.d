@@ -233,6 +233,7 @@ before packages are loaded."
     "ydP" 'drag-stuff-left
     "ydN" 'drag-stuff-right)
 
+  (spacemacs/set-leader-keys "se" 'iedit-mode)
   (use-package pytest
     :commands (pytest-run))
   (defun pyvenv-load-local-virtualenv ()
