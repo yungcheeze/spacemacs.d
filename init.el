@@ -79,7 +79,7 @@ This function should only modify configuration layer settings."
      json
      yaml
      csv
-     groovy
+     (groovy :variables groovy-indent-offset 2)
      nginx
      docker
      nixos
