@@ -24,8 +24,8 @@ This function should only modify configuration layer settings."
      version-control
      (markdown :variables
                markdown-live-preview-engine 'vmd)
-     pdf
-     multiple-cursors
+     (multiple-cursors :variables
+                       multiple-cursors-backend 'mc)
      (org :variables
           org-enable-github-support t
           org-enable-bootstrap-support t
