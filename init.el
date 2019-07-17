@@ -316,4 +316,9 @@ before packages are loaded."
                (current-buffer))
       (error (message "Invalid expression")
              (insert (current-kill 0)))))
+
+  (defun indent-buffer ()
+    (interactive)
+    (save-excursion
+      (indent-region (point-min) (point-max) nil)))
 )
