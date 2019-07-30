@@ -34,6 +34,7 @@ This function should only modify configuration layer settings."
           org-projectile-capture-template "* TODO %?\n  %a"
           org-enable-org-journal-support t
           org-journal-dir "~/Dropbox/org/journal"
+          org-image-actual-width 500
           )
      (shell :variables
             shell-default-shell 'multi-term
