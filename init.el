@@ -208,6 +208,7 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (global-set-key "\C-s" 'isearch-forward)
 
   (drag-stuff-global-mode 1)
   (setq-default shift-select-mode nil)
