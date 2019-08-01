@@ -11,7 +11,8 @@ This function should only modify configuration layer settings."
 
    dotspacemacs-configuration-layers
    '(
-     ivy
+     (ivy :variables
+          ivy-enable-advanced-buffer-information t)
 
      (treemacs :variables
                treemacs-use-follow-mode nil
