@@ -59,7 +59,7 @@ This function should only modify configuration layer settings."
              python-test-runner 'pytest
              python-formatter 'yapf
              python-format-on-save t
-             py-isort-options "--multi_line_output 7"
+             py-isort-options '("-sl")
              pytest-cmd-flags "-x -s -vv"
              pytest-global-name "python3 -m pytest"
              python-sort-imports-on-save t
