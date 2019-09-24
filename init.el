@@ -98,6 +98,7 @@ This function should only modify configuration layer settings."
                                       keychain-environment
                                       drag-stuff
                                       swap-regions
+                                      yafolding
                                       )
 
    dotspacemacs-frozen-packages '()
