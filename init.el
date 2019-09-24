@@ -79,6 +79,7 @@ This function should only modify configuration layer settings."
      (java :variables
            java-backend 'lsp)
      (sql :variables sql-capitalize-keywords t)
+     javascript
      haskell
      html
      json
