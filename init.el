@@ -76,6 +76,8 @@ This function should only modify configuration layer settings."
             clang-format-style "Google"
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
+     (java :variables
+           java-backend 'lsp)
      (sql :variables sql-capitalize-keywords t)
      haskell
      html
