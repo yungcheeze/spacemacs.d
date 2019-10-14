@@ -331,4 +331,9 @@ before packages are loaded."
     (interactive)
     (save-excursion
       (indent-region (point-min) (point-max) nil)))
+
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (cancel-function-timers 'org-indent-initialize-agent)))
+
 )
