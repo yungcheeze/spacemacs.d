@@ -171,7 +171,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-mode-line-unicode-symbols t
    dotspacemacs-smooth-scrolling t
    dotspacemacs-line-numbers nil
-   dotspacemacs-folding-method 'evil
+   dotspacemacs-folding-method 'origami
    dotspacemacs-smartparens-strict-mode t
    dotspacemacs-smart-closing-parenthesis nil
    dotspacemacs-highlight-delimiters 'all
