@@ -79,7 +79,8 @@ This function should only modify configuration layer settings."
             c-c++-enable-google-style t
             c-c++-enable-google-newline t)
      (java :variables
-           java-backend 'lsp)
+           java-backend 'lsp
+           lsp-java-server-install-dir (locate-user-emacs-file "eclipse.jdt.ls/"))
      (sql :variables sql-capitalize-keywords t)
      javascript
      haskell
