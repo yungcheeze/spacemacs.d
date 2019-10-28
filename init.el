@@ -257,6 +257,9 @@ before packages are loaded."
   (defvar pytest-unit-tests-dir "unit_tests"
     "Directory containing unit tests. Must be relative to projectile root")
 
+  (defvar pytest-integration-tests-dir "integration_tests"
+    "Directory containing integration tests. Must be relative to projectile root")
+
   (defun pytest-run-marked-tests(marker-expression)
     (interactive(list(read-string "marker expression: ")))
     (pytest-all (concat pytest-cmd-flags (concat " -m '" marker-expression "'") )))
@@ -269,11 +272,15 @@ before packages are loaded."
   (defun pytest-run-unit-tests()
     (interactive)
     (pytest-run pytest-unit-tests-dir pytest-cmd-flags))
+  (defun pytest-run-integration-tests()
+    (interactive)
+    (pytest-run pytest-integration-tests-dir pytest-cmd-flags))
 
   (spacemacs/declare-prefix-for-mode 'python-mode "mte" "test-extras")
   (spacemacs/set-leader-keys-for-major-mode 'python-mode
     "tes" 'pytest-run-slow-tests
     "teu" 'pytest-run-unit-tests
+    "tei" 'pytest-run-integration-tests
     "tef" 'pytest-run-fast-tests
     "tem" 'pytest-run-marked-tests)
 
