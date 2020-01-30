@@ -297,6 +297,7 @@ before packages are loaded."
               (local-set-key (kbd "C-<") 'python-indent-shift-left)
               (local-set-key (kbd "C->") 'python-indent-shift-right)))
 
+  (define-key ivy-minibuffer-map (kbd "C-h") 'ivy-backward-delete-char)
 
   (load-file "~/.spacemacs.d/private/gtest-mode.el")
   (setq gtest-run-in-test-directory t)
