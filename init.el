@@ -260,6 +260,7 @@ before packages are loaded."
 
   (defvar pytest-integration-tests-dir "integration_tests"
     "Directory containing integration tests. Must be relative to projectile root")
+  (defvar pytest-test-dirs "unit_tests integration_tests")
 
   (defun pytest-run-marked-tests(marker-expression)
     (interactive(list(read-string "marker expression: ")))
@@ -276,6 +277,10 @@ before packages are loaded."
   (defun pytest-run-integration-tests()
     (interactive)
     (pytest-run pytest-integration-tests-dir pytest-cmd-flags))
+  (defun pytest-run-tests-in-folder(test-folder)
+    (interactive(list(ivy-completing-read "test folder: " (split-string pytest-test-dirs))))
+    (pytest-run test-folder pytest-cmd-flags))
+
 
   (spacemacs/declare-prefix-for-mode 'python-mode "mte" "test-extras")
   (spacemacs/set-leader-keys-for-major-mode 'python-mode
@@ -283,7 +288,8 @@ before packages are loaded."
     "teu" 'pytest-run-unit-tests
     "tei" 'pytest-run-integration-tests
     "tef" 'pytest-run-fast-tests
-    "tem" 'pytest-run-marked-tests)
+    "tem" 'pytest-run-marked-tests
+    "ted" 'pytest-run-tests-in-folder)
 
   (add-hook 'python-mode-hook
             (lambda ()
