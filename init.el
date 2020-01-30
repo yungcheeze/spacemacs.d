@@ -103,6 +103,7 @@ This function should only modify configuration layer settings."
                                       drag-stuff
                                       swap-regions
                                       yafolding
+                                      annotate
                                       )
 
    dotspacemacs-frozen-packages '()
