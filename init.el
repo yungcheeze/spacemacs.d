@@ -86,6 +86,7 @@ This function should only modify configuration layer settings."
      haskell
      html
      json
+     rust ;; for toml-mode
      yaml
      csv
      pdf
