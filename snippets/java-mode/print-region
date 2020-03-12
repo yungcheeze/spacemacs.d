@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: print-region
+# key: print-region
+# binding: C-c TAB
+# --
+
+System.out.println("`yas-selected-text` = " + $0);
